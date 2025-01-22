@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
@@ -30,14 +31,15 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex items-start space-x-4">
+                  <Briefcase className="w-6 h-6 text-secondary mt-1" />
                   <div>
                     <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
                     <p className="text-secondary">{exp.company}</p>
+                    <p className="text-gray-500">{exp.period}</p>
+                    <p className="text-gray-600 mt-2">{exp.description}</p>
                   </div>
-                  <span className="text-sm text-gray-500">{exp.period}</span>
                 </div>
-                <p className="text-gray-600">{exp.description}</p>
               </CardContent>
             </Card>
           ))}
