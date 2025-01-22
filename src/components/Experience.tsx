@@ -23,12 +23,12 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-gray-50">
+    <section id="experience" className="section-padding bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <div className="container mx-auto">
         <h2 className="section-title">Experience</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-white/80">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>

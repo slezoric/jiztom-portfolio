@@ -24,12 +24,12 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="section-padding bg-gray-50">
+    <section id="education" className="section-padding bg-gradient-to-bl from-blue-50 via-white to-purple-50">
       <div className="container mx-auto">
         <h2 className="section-title">Education</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {education.map((edu, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-white/80">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <GraduationCap className="w-6 h-6 text-secondary mt-1" />
