@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-8">
           <img
-            src="/profile-placeholder.jpg"
+            src="jiztom.jpeg"
             alt="Jiztom Kavalakkatt Francis"
             className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white/20"
           />
@@ -16,7 +16,7 @@ const Hero = () => {
           Jiztom Kavalakkatt Francis
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in">
-          Python AI Engineer | Digital Agriculture Researcher
+          Python AI Engineer | Digital Agriculture Researcher | Hardware Engineer
         </p>
         <p className="text-lg mb-8 max-w-2xl mx-auto text-gray-300 animate-fade-in">
           Innovating at the intersection of AI and agriculture, specializing in machine vision

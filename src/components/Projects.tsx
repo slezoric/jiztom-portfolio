@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Residue Project",
     description: "A full-stack e-commerce solution built with React and Node.js",
     tech: ["React", "Node.js", "MongoDB", "Redux"],
     github: "https://github.com/yourusername/project1",
