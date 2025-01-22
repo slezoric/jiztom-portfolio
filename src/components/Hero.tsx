@@ -1,31 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
+import AnimatedBackground from "./AnimatedBackground";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-primary-light text-white">
-      <div className="container mx-auto px-4 text-center">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <AnimatedBackground />
+      <div className="container mx-auto px-4 text-center relative z-10">
         <div className="mb-8">
           <img
             src="jiztom.jpeg"
             alt="Jiztom Kavalakkatt Francis"
-            className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white/20"
+            className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-indigo-500/20 hover:border-indigo-500/40 transition-colors"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           Jiztom Kavalakkatt Francis
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in">
+        <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-300 animate-fade-in">
           Python AI Engineer | Digital Agriculture Researcher | Hardware Engineer
         </p>
-        <p className="text-lg mb-8 max-w-2xl mx-auto text-gray-300 animate-fade-in">
+        <p className="text-lg mb-8 max-w-2xl mx-auto text-slate-600 dark:text-slate-400 animate-fade-in">
           Innovating at the intersection of AI and agriculture, specializing in machine vision
           and deep learning solutions.
         </p>
         <div className="space-x-4">
           <Button
             variant="outline"
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary transition-all"
+            className="bg-transparent border-2 border-indigo-500 text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-950/30 transition-all"
             onClick={() => document.getElementById("contact")?.scrollIntoView()}
           >
             <Mail className="mr-2 h-4 w-4" />
@@ -33,7 +35,7 @@ const Hero = () => {
           </Button>
           <Button
             variant="default"
-            className="bg-secondary hover:bg-secondary-light text-white transition-all"
+            className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white transition-all"
             onClick={() => window.open("/resume.pdf", "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
