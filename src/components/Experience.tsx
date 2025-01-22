@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { useState } from "react";
 
 const experiences = [
   {
@@ -22,6 +24,15 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const [reactions, setReactions] = useState<{ [key: number]: 'like' | 'dislike' | null }>({});
+
+  const handleReaction = (index: number, type: 'like' | 'dislike') => {
+    setReactions(prev => ({
+      ...prev,
+      [index]: prev[index] === type ? null : type
+    }));
+  };
+
   return (
     <section id="experience" className="section-padding bg-gray-50">
       <div className="container mx-auto">
@@ -33,11 +44,25 @@ const Experience = () => {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
-                    <p className="text-secondary">{exp.company}</p>
+                    <p className="text-primary">{exp.company}</p>
                   </div>
                   <span className="text-sm text-gray-500">{exp.period}</span>
                 </div>
                 <p className="text-gray-600">{exp.description}</p>
+                <div className="flex gap-4 mt-4">
+                  <button 
+                    onClick={() => handleReaction(index, 'like')}
+                    className={`flex items-center gap-1 ${reactions[index] === 'like' ? 'text-secondary' : 'text-gray-500'}`}
+                  >
+                    <ThumbsUp size={18} />
+                  </button>
+                  <button 
+                    onClick={() => handleReaction(index, 'dislike')}
+                    className={`flex items-center gap-1 ${reactions[index] === 'dislike' ? 'text-secondary' : 'text-gray-500'}`}
+                  >
+                    <ThumbsDown size={18} />
+                  </button>
+                </div>
               </CardContent>
             </Card>
           ))}
