@@ -34,7 +34,7 @@ const Education = () => {
                 <div className="flex items-start space-x-4">
                   <GraduationCap className="w-6 h-6 text-secondary mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-primary">{edu.degree}</h3>
+                    <h3 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{edu.degree}</h3>
                     <p className="text-secondary">{edu.school}</p>
                     <p className="text-gray-500">{edu.period}</p>
                     <p className="text-gray-600 mt-2">GPA: {edu.gpa}</p>

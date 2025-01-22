@@ -32,7 +32,7 @@ const Experience = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
+                    <h3 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{exp.title}</h3>
                     <p className="text-secondary">{exp.company}</p>
                   </div>
                   <span className="text-sm text-gray-500">{exp.period}</span>
