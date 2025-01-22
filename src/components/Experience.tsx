@@ -2,22 +2,22 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const experiences = [
   {
-    title: "Senior Developer",
-    company: "Tech Corp",
+    title: "Graduate Research Assistant",
+    company: "Iowa State University",
     period: "2020 - Present",
-    description: "Led development of enterprise applications using React and Node.js.",
+    description: "Leading research in digital agriculture, developing ML models for crop analysis and insect detection. Enhanced agricultural ML models with 95% accuracy in pest detection.",
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Inc",
-    period: "2018 - 2020",
-    description: "Developed and maintained multiple web applications for clients.",
+    title: "Software Development Engineer",
+    company: "3M",
+    period: "2019 - 2020",
+    description: "Developed U-Net-based data pipelines and implemented real-time sensor visualizations. Improved data processing efficiency by 40%.",
   },
   {
-    title: "Junior Developer",
-    company: "StartUp Ltd",
-    period: "2016 - 2018",
-    description: "Worked on frontend development using React and Angular.",
+    title: "Software Engineer",
+    company: "GE Appliances",
+    period: "2017 - 2018",
+    description: "Created advanced inventory control systems and optimized database queries. Reduced processing time by 60% through efficient SQL optimization.",
   },
 ];
 

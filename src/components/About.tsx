@@ -5,14 +5,16 @@ const About = () => {
         <h2 className="section-title">About Me</h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            I am a passionate Full Stack Developer with expertise in building scalable web applications.
-            With a strong foundation in both frontend and backend development, I strive to create
-            elegant solutions that solve real-world problems.
+            As a Python AI Engineer and researcher in digital agriculture, I specialize in developing
+            innovative solutions using machine vision and machine learning. My work includes pioneering
+            sound-based insect detection techniques and creating efficient data pipelines for agricultural
+            applications.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            My journey in software development began 5 years ago, and since then, I've worked with
-            various technologies and frameworks. I'm particularly interested in creating intuitive user
-            interfaces and optimizing application performance.
+            Currently pursuing my Ph.D. in Computer Engineering at Iowa State University, I combine
+            academic research with practical industry experience to solve complex problems in
+            agricultural technology. My expertise spans Python, TensorFlow, and SQL, enabling me to
+            build robust and scalable AI solutions.
           </p>
         </div>
       </div>

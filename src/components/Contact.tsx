@@ -15,7 +15,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
     toast({
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
@@ -32,14 +31,14 @@ const Contact = () => {
             <h3 className="text-xl font-semibold text-primary">Contact Information</h3>
             <div className="space-y-4">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:jiztom@iastate.edu"
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>your.email@example.com</span>
+                <span>jiztom@iastate.edu</span>
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/jiztom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
@@ -48,7 +47,7 @@ const Contact = () => {
                 <span>LinkedIn Profile</span>
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/jiztom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
