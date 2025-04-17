@@ -10,8 +10,8 @@ interface HobbyProps {
 
 const hobbyData: HobbyProps[] = [
   {
-    title: "Photography",
-    description: "Capturing landscapes and architectural details through digital photography, with a focus on composition and lighting techniques.",
+    title: "Drone Photography",
+    description: "Capturing landscapes and architectural details through drone photography, with a focus on water and landscapes.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -52,30 +52,30 @@ const hobbyData: HobbyProps[] = [
       </svg>
     ),
   },
-  {
-    title: "Chess",
-    description: "Playing competitive chess online and in local tournaments, with a particular interest in strategic openings and endgame tactics.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-secondary"
-      >
-        <path d="M8 16l-1.447.724a1 1 0 0 0-.553.894V20h12v-2.382a1 1 0 0 0-.553-.894L16 16" />
-        <circle cx="12" cy="4" r="2" />
-        <path d="M10 10h4" />
-        <path d="M12 4v6" />
-        <path d="M4.71 10.5A4 4 0 0 0 7 17h10a4 4 0 0 0 2.29-6.5" />
-      </svg>
-    ),
-  },
+  // {
+  //   title: "Chess",
+  //   description: "Playing competitive chess online and in local tournaments, with a particular interest in strategic openings and endgame tactics.",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //       className="text-secondary"
+  //     >
+  //       <path d="M8 16l-1.447.724a1 1 0 0 0-.553.894V20h12v-2.382a1 1 0 0 0-.553-.894L16 16" />
+  //       <circle cx="12" cy="4" r="2" />
+  //       <path d="M10 10h4" />
+  //       <path d="M12 4v6" />
+  //       <path d="M4.71 10.5A4 4 0 0 0 7 17h10a4 4 0 0 0 2.29-6.5" />
+  //     </svg>
+  //   ),
+  // },
   {
     title: "Open Source Contributing",
     description: "Contributing to open source machine learning libraries, focusing on documentation improvements and optimization for agricultural applications.",
