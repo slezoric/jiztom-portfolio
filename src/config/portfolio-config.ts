@@ -1,3 +1,4 @@
+
 // Portfolio Configuration File
 // Edit this file to update your portfolio content
 
@@ -112,28 +113,36 @@ export const projectsInfo = [
     description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
     tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
     github: "https://github.com/jiztom/residue-project",
-    // live: "https://residue-project.com",
+    showGithub: true,
+    live: "",
+    showLive: false,
   },
   {
     title: "Multi-spectral Image Analysis",
     description: "Created a comprehensive analysis system for multi-spectral imagery in agriculture, integrating data from various sensors to provide actionable insights on crop health, soil conditions, and yield prediction.",
     tech: ["Python", "MATLAB", "Image Processing", "Deep Learning"],
     github: "https://github.com/jiztom/multi-spectral-analysis",
-    // live: "https://multi-spectral.demo.com",
+    showGithub: true,
+    live: "",
+    showLive: false,
   },
   {
     title: "Sound-Based Insect Detection",
     description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
     tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
     github: "https://github.com/jiztom/acoustic-pest-detection",
-    // live: "https://acoustic-pest-detection.demo.com",
+    showGithub: true,
+    live: "",
+    showLive: false,
   },
   {
     title: "Agricultural Data Pipeline",
     description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
     tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
     github: "https://github.com/jiztom/agri-data-pipeline",
-    // live: "https://agri-data-pipeline.demo.com",
+    showGithub: true,
+    live: "",
+    showLive: false,
   },
 ];
 

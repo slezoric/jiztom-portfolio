@@ -39,24 +39,28 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex space-x-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group"
-                    onClick={() => window.open(project.github, "_blank")}
-                  >
-                    <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                    GitHub
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group"
-                    onClick={() => window.open(project.live, "_blank")}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                    Live Demo
-                  </Button>
+                  {project.showGithub !== false && project.github && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="group"
+                      onClick={() => window.open(project.github, "_blank")}
+                    >
+                      <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                      GitHub
+                    </Button>
+                  )}
+                  {project.showLive !== false && project.live && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="group"
+                      onClick={() => window.open(project.live, "_blank")}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                      Live Demo
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
