@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
             <a href="#skills" className="nav-link">Skills</a>
             <a href="#experience" className="nav-link">Experience</a>
             <a href="#projects" className="nav-link">Projects</a>
+            <a href="#publications" className="nav-link">Publications</a>
             <a href="#education" className="nav-link">Education</a>
             <a href="#contact" className="nav-link">Contact</a>
           </div>
