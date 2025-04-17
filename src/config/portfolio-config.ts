@@ -16,8 +16,8 @@ export const personalInfo = {
 // About Section
 export const aboutInfo = {
   paragraphs: [
-    "As a Python AI Engineer and researcher in digital agriculture, I specialize in developing innovative solutions using machine vision and machine learning. My work includes pioneering sound-based insect detection techniques and creating efficient data pipelines for agricultural applications.",
-    "Currently pursuing my Ph.D. in Computer Engineering at Iowa State University, I combine academic research with practical industry experience to solve complex problems in agricultural technology. My expertise spans Python, TensorFlow, and SQL, enabling me to build robust and scalable AI solutions.",
+    "I'm a Python AI Engineer and researcher passionate about driving innovation in digital agriculture. My work focuses on machine vision and machine learning, where I develop cutting-edge solutions like sound-based insect detection and optimized data pipelines for agricultural applications.",
+"Currently pursuing my Ph.D. in Computer Engineering at Iowa State University, I merge academic research with real-world problem-solving to advance agricultural technology. With expertise in Python, TensorFlow, and SQL, I craft robust, scalable AI systems that enhance efficiency and precision in the field.",
   ],
   skills: ["Python", "TensorFlow", "SQL"],
 };
@@ -112,28 +112,28 @@ export const projectsInfo = [
     description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
     tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
     github: "https://github.com/jiztom/residue-project",
-    live: "https://residue-project.com",
+    // live: "https://residue-project.com",
   },
   {
     title: "Multi-spectral Image Analysis",
     description: "Created a comprehensive analysis system for multi-spectral imagery in agriculture, integrating data from various sensors to provide actionable insights on crop health, soil conditions, and yield prediction.",
     tech: ["Python", "MATLAB", "Image Processing", "Deep Learning"],
     github: "https://github.com/jiztom/multi-spectral-analysis",
-    live: "https://multi-spectral.demo.com",
+    // live: "https://multi-spectral.demo.com",
   },
   {
     title: "Sound-Based Insect Detection",
     description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
     tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
     github: "https://github.com/jiztom/acoustic-pest-detection",
-    live: "https://acoustic-pest-detection.demo.com",
+    // live: "https://acoustic-pest-detection.demo.com",
   },
   {
     title: "Agricultural Data Pipeline",
     description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
     tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
     github: "https://github.com/jiztom/agri-data-pipeline",
-    live: "https://agri-data-pipeline.demo.com",
+    // live: "https://agri-data-pipeline.demo.com",
   },
 ];
 
@@ -141,7 +141,7 @@ export const projectsInfo = [
 export const publicationsInfo = [
   {
     title: "Multivariate Temporal Regression at Scale: A Three-Pillar Framework Combining ML, XAI and NLP",
-    journal: "International Conference on Electrical, Computer, and Energy Technologies",
+    journal: "IEEE - International Conference on Electrical, Computer, and Energy Technologies",
     year: 2025,
     authors: "J.F Kavalakkatt, M.J Darr",
     doi: "",
@@ -150,7 +150,7 @@ export const publicationsInfo = [
   },
   {
     title: "Efficient Data Pipelines for Agricultural Machine Vision Systems",
-    conference: "International Conference on Machine Learning and Application",
+    conference: "IEEE - International Conference on Machine Learning and Application",
     year: 2023,
     authors: "J.F Kavalakkatt,C. Kumar,J. Herrera-Gerena, K. Kumar, M.J Darr",
     doi: "10.1109/ICMLA55696.2022.00125",
@@ -185,18 +185,18 @@ export const educationInfo = [
 export const testimonialsInfo = [
   {
     quote: "Jiztom's expertise in AI and agriculture has been instrumental in advancing our research initiatives. His innovative approaches to complex problems consistently deliver exceptional results.",
-    name: "Dr. Michael Darr",
+    name: "Dr. M J Darr",
     title: "Professor, Iowa State University"
   },
   {
     quote: "Working with Jiztom on the agricultural data pipeline project transformed our approach to data analysis. His technical skills and domain knowledge made a significant impact on our operations.",
-    name: "Sarah Johnson",
-    title: "Research Lead, Digital Agriculture Initiative"
+    name: "Chandan Kumar",
+    title: "Research Assistant, Oak Ridge National Lab (Iowa State University)"
   },
   {
     quote: "The sound-based insect detection system developed by Jiztom represents a breakthrough in pest management technology. His work combines technical excellence with practical agricultural applications.",
     name: "Robert Chen",
-    title: "Director of Innovation, AgTech Solutions"
+    title: "Director of Innovation, Iowa State University"
   },
 ];
 
