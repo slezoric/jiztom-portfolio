@@ -13,21 +13,35 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Form data will be submitted automatically by the browser
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    // Reset form after submission
-    setTimeout(() => {
+    try {
+      // Form data will be submitted automatically by the browser
+      // Adding a small delay to simulate the form submission for UX
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
+      // Reset form after submission
       setFormData({ name: "", email: "", message: "" });
-    }, 100);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error sending message",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,6 +89,9 @@ const Contact = () => {
             {/* Honeypot field to prevent spam */}
             <input name="_honey_pot" type="text" style={{ display: 'none' }} />
             
+            {/* Hidden field for recipient email */}
+            <input type="hidden" name="_to" value="jiztom@gmail.com" />
+            
             <Input
               name="name"
               placeholder="Your Name"
@@ -98,8 +115,12 @@ const Contact = () => {
               required
               className="min-h-[150px]"
             />
-            <Button type="submit" className="w-full bg-secondary hover:bg-secondary-light">
-              Send Message
+            <Button 
+              type="submit" 
+              className="w-full bg-secondary hover:bg-secondary-light"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
