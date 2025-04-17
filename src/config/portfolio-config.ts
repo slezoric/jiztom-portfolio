@@ -244,6 +244,7 @@ export const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Publications", href: "#publications" },
   { name: "Testimonials", href: "#testimonials" },
+  { name: "Hobbies", href: "#hobbies" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
@@ -261,6 +262,7 @@ export const styling = {
     projects: "from-white to-white",
     publications: "from-blue-50 via-white to-indigo-50",
     testimonials: "from-purple-50 to-indigo-50",
+    hobbies: "from-white to-white",
     education: "from-blue-50 via-white to-purple-50",
     contact: "from-white to-white",
   },
