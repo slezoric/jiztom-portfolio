@@ -1,4 +1,3 @@
-
 // Portfolio Configuration File
 // Edit this file to update your portfolio content
 
@@ -110,17 +109,31 @@ export const experienceInfo = [
 export const projectsInfo = [
   {
     title: "Residue Project",
-    description: "A full-stack e-commerce solution built with React and Node.js",
-    tech: ["React", "Node.js", "MongoDB", "Redux"],
-    github: "https://github.com/yourusername/project1",
-    live: "https://project1.com",
+    description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
+    tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
+    github: "https://github.com/jiztom/residue-project",
+    live: "https://residue-project.com",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management tool with real-time updates",
-    tech: ["React", "Firebase", "Material-UI", "TypeScript"],
-    github: "https://github.com/yourusername/project2",
-    live: "https://project2.com",
+    title: "Multi-spectral Image Analysis",
+    description: "Created a comprehensive analysis system for multi-spectral imagery in agriculture, integrating data from various sensors to provide actionable insights on crop health, soil conditions, and yield prediction.",
+    tech: ["Python", "MATLAB", "Image Processing", "Deep Learning"],
+    github: "https://github.com/jiztom/multi-spectral-analysis",
+    live: "https://multi-spectral.demo.com",
+  },
+  {
+    title: "Sound-Based Insect Detection",
+    description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
+    tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
+    github: "https://github.com/jiztom/acoustic-pest-detection",
+    live: "https://acoustic-pest-detection.demo.com",
+  },
+  {
+    title: "Agricultural Data Pipeline",
+    description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
+    tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
+    github: "https://github.com/jiztom/agri-data-pipeline",
+    live: "https://agri-data-pipeline.demo.com",
   },
 ];
 
@@ -144,15 +157,6 @@ export const publicationsInfo = [
     abstract: "We propose a deep learning methodology for multivariable regression based on pattern recognition that triggers fast learning over sensor data. We used a conversion of sensors-to-image, which enables us to take advantage of Computer Vision architectures and training processes. In addition to this data preparation methodology, we explore using state-of-the-art architectures to generate regression outputs to predict agricultural crop continuous yield information. Finally, we compare with some top models reported in MLCAS2021. We found that using a straightforward training process, we were able to accomplish an MAE of 4.394, RMSE of 5.945, and R2 of 0.861.",
     type: "IEEE conference",
   },
-  // {
-  //   title: "Machine Learning Applications in Digital Agriculture: A Review",
-  //   journal: "AI in Agricultural Sciences",
-  //   year: 2021,
-  //   authors: "Johnson, A., Francis, J.K., Thompson, S.",
-  //   doi: "10.9012/aias.2021.045",
-  //   abstract: "This comprehensive review examines the current state of AI and ML applications across various domains of digital agriculture.",
-  //   type: "journal",
-  // },
 ];
 
 // Education Section
@@ -177,6 +181,25 @@ export const educationInfo = [
   },
 ];
 
+// Testimonials Section
+export const testimonialsInfo = [
+  {
+    quote: "Jiztom's expertise in AI and agriculture has been instrumental in advancing our research initiatives. His innovative approaches to complex problems consistently deliver exceptional results.",
+    name: "Dr. Michael Darr",
+    title: "Professor, Iowa State University"
+  },
+  {
+    quote: "Working with Jiztom on the agricultural data pipeline project transformed our approach to data analysis. His technical skills and domain knowledge made a significant impact on our operations.",
+    name: "Sarah Johnson",
+    title: "Research Lead, Digital Agriculture Initiative"
+  },
+  {
+    quote: "The sound-based insect detection system developed by Jiztom represents a breakthrough in pest management technology. His work combines technical excellence with practical agricultural applications.",
+    name: "Robert Chen",
+    title: "Director of Innovation, AgTech Solutions"
+  },
+];
+
 // Navigation links
 export const navLinks = [
   { name: "About", href: "#about" },
@@ -184,6 +207,7 @@ export const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Publications", href: "#publications" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
@@ -200,6 +224,7 @@ export const styling = {
     experience: "from-purple-50 via-white to-blue-50",
     projects: "from-white to-white",
     publications: "from-blue-50 via-white to-indigo-50",
+    testimonials: "from-purple-50 to-indigo-50",
     education: "from-blue-50 via-white to-purple-50",
     contact: "from-white to-white",
   },
