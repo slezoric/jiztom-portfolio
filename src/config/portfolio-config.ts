@@ -113,7 +113,7 @@ export const projectsInfo = [
     description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
     tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
     github: "https://github.com/jiztom/residue-project",
-    showGithub: true,
+    showGithub: false,
     live: "",
     showLive: false,
   },
@@ -130,7 +130,7 @@ export const projectsInfo = [
     title: "Sound-Based Insect Detection",
     description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
     tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
-    github: "https://github.com/jiztom/acoustic-pest-detection",
+    // github: "https://github.com/jiztom/acoustic-pest-detection",
     showGithub: true,
     live: "",
     showLive: false,
@@ -140,9 +140,36 @@ export const projectsInfo = [
     description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
     tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
     github: "https://github.com/jiztom/agri-data-pipeline",
-    showGithub: true,
+    showGithub: false,
     live: "",
     showLive: false,
+  },
+  {
+    title: "Loyola Alumni National Summit 2025 website",
+    description: "Developed a dedicated website to facilitate alumni engagement for Loyola Chennai's 100-year celebration in Dallas, USA. Built using Lovable.dev, the platform was customized to meet user needs, ensuring seamless accessibility and functionality. ",
+    tech: ["Php", "Lovable AI", "Docker", "typescript"],
+    github: "https://github.com/slezoric/loyola-alumini-national-summit-2025",
+    showGithub: true,
+    live: "https://loyola-alumini-national-summit-2025.lovable.app/",
+    showLive: true,
+  },
+  {
+    title: "Registration Desk QR Code generator - Zeffy integration",
+    description: "Designed and developed a WebApp for on-site event registration, generating custom QR codes to streamline networking among attendees at the Loyola Alumni Summit. Built using Lovable AI, the platform enhanced connectivity and engagement for registered members.",
+    tech: ["Php", "Lovable AI", "Docker", "typescript"],
+    github: "https://github.com/slezoric/loyola-alumini-label-maker",
+    showGithub: true,
+    live: "https://loyola-alumini-label-maker.lovable.app/",
+    showLive: true,
+  },
+  {
+    title: "Jiztom's Portfolio",
+    description: "Designed and developed a interactive portfolio with updated and working data with live interactions.",
+    tech: ["Php", "Lovable AI", "Docker", "typescript"],
+    github: "https://github.com/slezoric/loyola-alumini-label-maker",
+    showGithub: false,
+    live: "https://jiztom-portfolio.lovable.app/",
+    showLive: true,
   },
 ];
 
@@ -204,8 +231,8 @@ export const testimonialsInfo = [
   },
   {
     quote: "The sound-based insect detection system developed by Jiztom represents a breakthrough in pest management technology. His work combines technical excellence with practical agricultural applications.",
-    name: "Robert Chen",
-    title: "Director of Innovation, Iowa State University"
+    name: "Peter Hong",
+    title: "Director, ISU Startup Factory, Iowa State University"
   },
 ];
 
