@@ -1,11 +1,13 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { styling } from "@/config/portfolio-config";
+import { Button } from "@/components/ui/button";
 
 interface HobbyProps {
   title: string;
   description: string;
   icon: React.ReactNode;
+  website?: string;
 }
 
 const hobbyData: HobbyProps[] = [
@@ -25,10 +27,14 @@ const hobbyData: HobbyProps[] = [
         strokeLinejoin="round"
         className="text-secondary"
       >
-        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-        <circle cx="12" cy="13" r="3" />
+        <path d="M12 12H5a2 2 0 0 0-2 2v5" />
+        <path d="M19 12h-7" />
+        <path d="M5 15v-3a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3" />
+        <circle cx="7" cy="19" r="2" />
+        <circle cx="17" cy="19" r="2" />
       </svg>
     ),
+    website: "https://dronephotography.portfolio.com",
   },
   {
     title: "3D Printing",
@@ -51,6 +57,7 @@ const hobbyData: HobbyProps[] = [
         <line x1="12" y1="22" x2="12" y2="12" />
       </svg>
     ),
+    website: "https://3dprinting.examples.com",
   },
   // {
   //   title: "Chess",
@@ -96,6 +103,7 @@ const hobbyData: HobbyProps[] = [
         <path d="M9 18c-4.51 2-5-2-7-2" />
       </svg>
     ),
+    website: "https://github.com/jiztom",
   },
 ];
 
@@ -117,7 +125,34 @@ const Hobbies = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-primary">{hobby.title}</h3>
                 </div>
-                <p className="text-gray-600">{hobby.description}</p>
+                <p className="text-gray-600 mb-4">{hobby.description}</p>
+                {hobby.website && (
+                  <div className="mt-auto">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-secondary hover:text-secondary-light"
+                      onClick={() => window.open(hobby.website, "_blank")}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="mr-1"
+                      >
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                      </svg>
+                      Visit Website
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
