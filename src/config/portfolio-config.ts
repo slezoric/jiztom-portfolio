@@ -49,19 +49,34 @@ export const experienceInfo = [
     title: "Graduate Research Assistant",
     company: "Iowa State University",
     period: "2020 - Present",
-    description: "Leading research in digital agriculture, developing ML models for crop analysis and insect detection. Enhanced agricultural ML models with 95% accuracy in pest detection.",
+    description: [
+      "Led research in digital agriculture, developing ML models for crop analysis and insect detection",
+      "Enhanced agricultural ML models achieving 95% accuracy in pest detection",
+      "Established novel methodologies for sound-based insect classification",
+      "Collaborated with interdisciplinary teams to implement AI solutions in field environments"
+    ],
   },
   {
     title: "Data Science and Engineering Intern",
     company: "3M",
     period: "Summer 2023",
-    description: "Developed U-Net-based data pipelines and implemented real-time sensor visualizations. Improved data processing efficiency by 40%.",
+    description: [
+      "Developed U-Net-based data pipelines for manufacturing process optimization",
+      "Implemented real-time sensor visualizations for production monitoring",
+      "Improved data processing efficiency by 40% through algorithm optimization",
+      "Presented technical findings to senior management and engineering teams"
+    ],
   },
   {
     title: "Advanced Manufacturing Engineering Coop",
     company: "GE Appliances",
     period: "Fall 2018",
-    description: "Created advanced inventory control systems and optimized database queries. Reduced processing time by 60% through efficient SQL optimization.",
+    description: [
+      "Created advanced inventory control systems using SQL and Python",
+      "Optimized database queries reducing processing time by 60%",
+      "Developed automated testing protocols for quality assurance",
+      "Collaborated with cross-functional teams to implement process improvements"
+    ],
   },
 ];
 
