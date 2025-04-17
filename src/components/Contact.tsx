@@ -17,11 +17,17 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Form data will be submitted automatically by the browser
     toast({
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
     });
-    setFormData({ name: "", email: "", message: "" });
+    
+    // Reset form after submission
+    setTimeout(() => {
+      setFormData({ name: "", email: "", message: "" });
+    }, 100);
   };
 
   return (
@@ -60,14 +66,24 @@ const Contact = () => {
             </div>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form 
+            method="post" 
+            action="https://formowl.dev/api/@/LXAFOP" 
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
+            {/* Honeypot field to prevent spam */}
+            <input name="_honey_pot" type="text" style={{ display: 'none' }} />
+            
             <Input
+              name="name"
               placeholder="Your Name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               required
             />
             <Input
+              name="email"
               type="email"
               placeholder="Your Email"
               value={formData.email}
@@ -75,6 +91,7 @@ const Contact = () => {
               required
             />
             <Textarea
+              name="message"
               placeholder="Your Message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
