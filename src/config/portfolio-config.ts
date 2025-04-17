@@ -50,10 +50,11 @@ export const experienceInfo = [
     company: "Iowa State University",
     period: "2020 - Present",
     description: [
-      "Led research in digital agriculture, developing ML models for crop analysis and insect detection",
-      "Enhanced agricultural ML models achieving 95% accuracy in pest detection",
-      "Established novel methodologies for sound-based insect classification",
-      "Collaborated with interdisciplinary teams to implement AI solutions in field environments"
+      "Enhanced open-world detection capabilities by utilizing advanced image processing techniques and machine learning algorithms, layering data on images for improved machine learning applications.",
+      "Improved data handling efficiency by 30% by designing and implementing SQL Server data loaders and preprocessing pipelines.",
+      "Increased accuracy of image-based predictions by 25% by refining and optimizing machine learning algorithms for agri-tech applications.",
+      "Enhanced field accuracy in insect detection by pioneering novel sound-based detection techniques.",
+      "Boosted user engagement and decision-making by 40% by streamlining and optimizing data visualization tools for agricultural data."
     ],
   },
   {
@@ -61,10 +62,35 @@ export const experienceInfo = [
     company: "3M",
     period: "Summer 2023",
     description: [
-      "Developed U-Net-based data pipelines for manufacturing process optimization",
-      "Implemented real-time sensor visualizations for production monitoring",
-      "Improved data processing efficiency by 40% through algorithm optimization",
-      "Presented technical findings to senior management and engineering teams"
+      "Enhanced airflow sensor testing efficiency by 15% in the Dewey Duct Project by designing and implementing advanced testing protocols",
+      "Increased accuracy of wound imagery modeling by contributing to the integration and refinement of U-Net based data pipeline techniques.",
+      "Improved real-time data visualization capabilities by developing the Wanda Vision Platform, a sensor data visualization tool.",
+      "Fostered innovation and effective project ideation by facilitating cross-functional team collaborations and brainstorming sessions.",
+      "Delivered impactful results through innovative solutions by engaging in cross-functional team collaboration and idea generation."
+    ],
+  },
+  {
+    title: "Engineer Designer II/ Engineer I",
+    company: "Iowa State University",
+    period: "2020",
+    description: [
+      "Improved crop loss predictions by applying MATLAB for in-depth satellite imagery analysis.",
+      "Enhanced data analytics and backup efficiency by scripting automated SQL operations, leading to streamlined data analytics.",
+      "Boosted file system flexibility in research by pioneering VM products compatible with ext4 file systems.",
+      "Engineered GPS tagging and third-party integration for digital agriculture solutions.",
+      "Increased efficiency in documentation and image capture by developing a custom Android app."
+    ],
+  },
+  {
+    title: "Graduate Research Assistant – Digital Ag",
+    company: "Iowa State University",
+    period: "2019",
+    description: [
+      "Improved data accuracy by 30% in precision agriculture by engineering advanced vision systems and implementing them using MATLAB and LabVIEW.",
+      "Enhanced data logger functionality by pioneering Linux-based development techniques, leading to more robust data collection systems.",
+      "Refined object sensing capabilities across diverse terrains by spearheading tailored solutions for complex environments.",
+      "Advanced machinery data logging systems by pioneering innovative designs, increasing operational efficiency in data collection.",
+      "Implemented vision systems and mapping tools for precision agriculture, developed using MATLAB and LabVIEW to enhance operational accuracy."
     ],
   },
   {
@@ -72,10 +98,10 @@ export const experienceInfo = [
     company: "GE Appliances",
     period: "Fall 2018",
     description: [
-      "Created advanced inventory control systems using SQL and Python",
-      "Optimized database queries reducing processing time by 60%",
-      "Developed automated testing protocols for quality assurance",
-      "Collaborated with cross-functional teams to implement process improvements"
+      "Enhanced inventory management accuracy by 20% by creating and implementing a robust embedded inventory control label system.",
+      "Increased product quality consistency by 15% by fine-tuning test sequences for optimal quality assurance.",
+      "Improved quality control efficiency by 25% by ensuring quality in new product builds through meticulous testing.",
+      "Reduced defect rates by 30% by analyzing and improving camera testing systems for critical quality control"
     ],
   },
 ];
