@@ -57,7 +57,7 @@ const hobbyData: HobbyProps[] = [
         <line x1="12" y1="22" x2="12" y2="12" />
       </svg>
     ),
-    website: "https://3dprinting.examples.com",
+    website: "https://jfk-creative-3d-lab.lovable.app/",
   },
   // {
   //   title: "Chess",
