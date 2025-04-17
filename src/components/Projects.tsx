@@ -1,31 +1,16 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    title: "Residue Project",
-    description: "A full-stack e-commerce solution built with React and Node.js",
-    tech: ["React", "Node.js", "MongoDB", "Redux"],
-    github: "https://github.com/yourusername/project1",
-    live: "https://project1.com",
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task management tool with real-time updates",
-    tech: ["React", "Firebase", "Material-UI", "TypeScript"],
-    github: "https://github.com/yourusername/project2",
-    live: "https://project2.com",
-  },
-];
+import { projectsInfo, styling } from "@/config/portfolio-config";
 
 const Projects = () => {
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className={`section-padding bg-gradient-to-br ${styling.gradients.projects}`}>
       <div className="container mx-auto">
         <h2 className="section-title">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
+          {projectsInfo.map((project, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl text-primary">{project.title}</CardTitle>

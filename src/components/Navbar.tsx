@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { personalInfo, navLinks } from "@/config/portfolio-config";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,15 +18,13 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-xl font-bold text-primary">Jiztom K. Francis</a>
+          <a href="#" className="text-xl font-bold text-primary">{personalInfo.name}</a>
           <div className="hidden md:flex space-x-6">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#skills" className="nav-link">Skills</a>
-            <a href="#experience" className="nav-link">Experience</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#publications" className="nav-link">Publications</a>
-            <a href="#education" className="nav-link">Education</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.href} className="nav-link">
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
       </div>

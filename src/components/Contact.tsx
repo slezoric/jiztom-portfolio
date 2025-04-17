@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Linkedin, Github } from "lucide-react";
+import { personalInfo, styling } from "@/config/portfolio-config";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className={`section-padding bg-gradient-to-br ${styling.gradients.contact}`}>
       <div className="container mx-auto">
         <h2 className="section-title">Get in Touch</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -31,14 +33,14 @@ const Contact = () => {
             <h3 className="text-xl font-semibold text-primary">Contact Information</h3>
             <div className="space-y-4">
               <a
-                href="mailto:jiztom@iastate.edu"
+                href={`mailto:${personalInfo.email}`}
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>jiztom@iastate.edu</span>
+                <span>{personalInfo.email}</span>
               </a>
               <a
-                href="https://linkedin.com/in/jiztom"
+                href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
@@ -47,7 +49,7 @@ const Contact = () => {
                 <span>LinkedIn Profile</span>
               </a>
               <a
-                href="https://github.com/jiztom"
+                href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-600 hover:text-secondary transition-colors"
