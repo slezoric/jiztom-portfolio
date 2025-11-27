@@ -16,21 +16,33 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
-      // Form data will be submitted automatically by the browser
-      // Adding a small delay to simulate the form submission for UX
-      await new Promise(resolve => setTimeout(resolve, 500));
+      const form = e.currentTarget;
+      const formDataObj = new FormData(form);
+      
+      // Submit to FormOwl
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formDataObj,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
       
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
       
-      // Reset form after submission
+      // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Form submission error:", error);
