@@ -34,25 +34,86 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
 ### Prerequisites
 
-- Node.js 18+ and npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Bun** (recommended) or Node.js 18+ with npm/yarn
+  - [Install Bun](https://bun.sh/) - works on macOS, Linux, and Windows
+  - OR [Install Node.js with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-### Setup
+### Quick Setup (Automated)
 
+#### macOS / Linux
 ```sh
-# Step 1: Clone the repository
+# Make the script executable
+chmod +x scripts/setup.sh
+
+# Run the setup script
+./scripts/setup.sh
+```
+
+#### Windows
+```cmd
+# Run the setup script (double-click or run in terminal)
+scripts/setup.bat
+```
+
+The script will:
+- ✅ Install Bun if not already present
+- ✅ Install all project dependencies
+- ✅ Display next steps
+
+### Manual Setup
+
+**Step 1: Clone the repository**
+```sh
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install dependencies
-npm install
+**Step 2: Install Bun (if not already installed)**
 
-# Step 4: Start the development server
-npm run dev
+**macOS / Linux:**
+```sh
+curl -fsSL https://bun.sh/install | bash
+export PATH="$HOME/.bun/bin:$PATH"  # Add to ~/.zshrc or ~/.bash_profile
+```
+
+**Windows:**
+```powershell
+powershell -Command "iex (New-Object Net.WebClient).DownloadString('https://bun.sh/install.ps1')"
+```
+
+**Step 3: Install dependencies**
+```sh
+bun install
+```
+
+**Step 4: Start the development server**
+```sh
+bun run dev
 ```
 
 The application will be available at `http://localhost:8080`
+
+### Using npm/yarn instead of Bun
+
+If you prefer npm or yarn:
+
+```sh
+npm install      # or yarn install
+npm run dev      # or yarn dev
+npm run build    # or yarn build
+npm run lint     # or yarn lint
+```
+
+### Node.js Version Management
+
+This project uses Node.js 18+. If using nvm:
+
+```sh
+nvm install 18
+nvm use
+```
+
+The `.nvmrc` file specifies the Node.js version for automatic switching when using nvm.
 
 ## Configuration
 

@@ -1,0 +1,14 @@
+# Bun configuration file
+# Works on macOS, Windows (native), and Linux
+
+[install]
+# Use exact versions from lockfile
+prefer = "exact"
+
+[run]
+# Optimization settings
+shell = "sh"
+
+[test]
+# Test runner configuration
+timeout = 5m
