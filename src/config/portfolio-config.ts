@@ -4,9 +4,9 @@
 
 // Personal Information
 export const personalInfo = {
-  name: "Jiztom Kavalakkatt Francis",
-  title: "Python AI Engineer | Digital Agriculture Researcher | Hardware Engineer",
-  description: "Innovating at the intersection of AI and agriculture, specializing in machine vision and deep learning solutions.",
+  name: "Dr. Jiztom Kavalakkatt Francis",
+  title: "Data Engineer | Data Quality Researcher | Prototyping Engineer",
+  description: "Pioneering AI innovation through machine vision and deep learning",
   email: "jiztom@iastate.edu",
   linkedin: "https://linkedin.com/in/jiztom",
   github: "https://github.com/jiztom",
