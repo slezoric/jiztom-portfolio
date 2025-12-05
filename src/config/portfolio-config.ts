@@ -17,29 +17,31 @@ export const personalInfo = {
 // About Section
 export const aboutInfo = {
   paragraphs: [
-    "I'm a Python AI Engineer and researcher passionate about driving innovation in digital agriculture. My work focuses on machine vision and machine learning, where I develop cutting-edge solutions like sound-based insect detection and optimized data pipelines for agricultural applications.",
-"Currently pursuing my Ph.D. in Computer Engineering at Iowa State University, I merge academic research with real-world problem-solving to advance agricultural technology. With expertise in Python, TensorFlow, and SQL, I craft robust, scalable AI systems that enhance efficiency and precision in the field.",
+    "PhD Holder in Computer Engineering and Python AI Engineer dedicated to turning agricultural expertise into high-quality data that powers precision models. Expert in machine vision, regression modeling, and data pipeline optimization — delivering scalable AI solutions that drive real-world impact in digital agriculture."
   ],
-  skills: ["Python", "TensorFlow", "SQL"],
+  skills: ["Python", "ML Modelling", "C++", "TensorFlow", "OpenCV", "PyTorch"],
 };
 
 // Skills Section
 export const skillsInfo = {
   technicalSkills: [
     { name: "Python", level: 95 },
-    { name: "TensorFlow/PyTorch", level: 90 },
-    { name: "Machine Learning", level: 90 },
-    { name: "SQL", level: 85 },
-    { name: "Docker/Kubernetes", level: 80 },
-    { name: "MATLAB", level: 75 },
+    { name: "TensorFlow/PyTorch", level: 80 },
+    { name: "Machine Learning", level: 80 },
+    { name: "Data Engineering", level: 85 },
+    { name: "Computer Vision", level: 70 },
+    { name: "C++", level: 75 },
+    { name: "SQL", level: 65 },
+    { name: "Docker/Kubernetes", level: 65 },
+    { name: "MATLAB", level: 55 },
   ],
   languages: [
     { name: "English", level: "Native" },
-    { name: "French", level: "Professional" },
-    { name: "German", level: "Professional" },
+    { name: "Malayalam", level: "Native" },
     { name: "Hindi", level: "Fluent" },
     { name: "Tamil", level: "Native" },
-    { name: "Malayalam", level: "Native" },
+    { name: "French", level: "Professional" },
+    { name: "German", level: "Professional" },
   ],
 };
 
@@ -200,7 +202,7 @@ export const educationInfo = [
   {
     degree: "Ph.D. in Computer Engineering",
     school: "Iowa State University",
-    period: "Expected May 2025",
+    period: "December 2025",
     gpa: "3.82",
   },
   {
