@@ -1,271 +1,304 @@
 
+import { PortfolioConfig } from './types';
+
 // Portfolio Configuration File
 // Edit this file to update your portfolio content
 
-// Personal Information
-export const personalInfo = {
-  name: "Dr. Jiztom Kavalakkatt Francis",
-  title: "Data Engineer | Data Quality Researcher | Prototyping Engineer",
-  description: "Pioneering AI innovation through machine vision and deep learning",
-  email: "jiztom@iastate.edu",
-  linkedin: "https://linkedin.com/in/jiztom",
-  github: "https://github.com/jiztom",
-  resumeUrl: "/resume.pdf",
-  profileImage: "jiztom.jpeg",
-};
+export const portfolioConfig: PortfolioConfig = {
+  personalInfo: {
+    name: "Dr. Jiztom Kavalakkatt Francis",
+    shortName: "Dr. Jiztom",
+    title: "Data Engineer | Data Quality Researcher | Prototyping Engineer",
+    description: "Pioneering AI innovation through machine vision and deep learning",
+    email: "jiztom@iastate.edu",
+    linkedin: "https://linkedin.com/in/jiztom",
+    github: "https://github.com/jiztom",
+    resumeUrl: "/resume.pdf",
+    profileImage: "jiztom.jpeg",
+  },
 
-// About Section
-export const aboutInfo = {
-  paragraphs: [
-    "PhD Holder in Computer Engineering and Python AI Engineer dedicated to turning agricultural expertise into high-quality data that powers precision models. Expert in machine vision, regression modeling, and data pipeline optimization — delivering scalable AI solutions that drive real-world impact in digital agriculture."
+  aboutInfo: {
+    paragraphs: [
+      "PhD Holder in Computer Engineering and Python AI Engineer dedicated to turning agricultural expertise into high-quality data that powers precision models. Expert in machine vision, regression modeling, and data pipeline optimization — delivering scalable AI solutions that drive real-world impact in digital agriculture."
+    ],
+    skills: ["Python", "ML Modelling", "C++", "TensorFlow", "OpenCV", "PyTorch"],
+  },
+
+  skillsInfo: {
+    technicalSkills: [
+      { name: "Python", level: 95 },
+      { name: "TensorFlow/PyTorch", level: 80 },
+      { name: "Machine Learning", level: 80 },
+      { name: "Data Engineering", level: 85 },
+      { name: "Computer Vision", level: 70 },
+      { name: "C++", level: 75 },
+      { name: "SQL", level: 65 },
+      { name: "Docker/Kubernetes", level: 65 },
+      { name: "MATLAB", level: 55 },
+    ],
+    languages: [
+      { name: "English", level: "Native" },
+      { name: "Malayalam", level: "Native" },
+      { name: "Hindi", level: "Fluent" },
+      { name: "Tamil", level: "Native" },
+      { name: "French", level: "Professional" },
+      { name: "German", level: "Professional" },
+    ],
+  },
+
+  experienceInfo: [
+    {
+      title: "Graduate Research Assistant",
+      company: "Iowa State University",
+      period: "2020 - Present",
+      description: [
+        "Enhanced open-world detection capabilities by utilizing advanced image processing techniques and machine learning algorithms, layering data on images for improved machine learning applications.",
+        "Improved data handling efficiency by 30% by designing and implementing SQL Server data loaders and preprocessing pipelines.",
+        "Increased accuracy of image-based predictions by 25% by refining and optimizing machine learning algorithms for agri-tech applications.",
+        "Enhanced field accuracy in insect detection by pioneering novel sound-based detection techniques.",
+        "Boosted user engagement and decision-making by 40% by streamlining and optimizing data visualization tools for agricultural data."
+      ],
+    },
+    {
+      title: "Data Science and Engineering Intern",
+      company: "3M",
+      period: "Summer 2023",
+      description: [
+        "Enhanced airflow sensor testing efficiency by 15% in the Dewey Duct Project by designing and implementing advanced testing protocols",
+        "Increased accuracy of wound imagery modeling by contributing to the integration and refinement of U-Net based data pipeline techniques.",
+        "Improved real-time data visualization capabilities by developing the Wanda Vision Platform, a sensor data visualization tool.",
+        "Fostered innovation and effective project ideation by facilitating cross-functional team collaborations and brainstorming sessions.",
+        "Delivered impactful results through innovative solutions by engaging in cross-functional team collaboration and idea generation."
+      ],
+    },
+    {
+      title: "Engineer Designer II/ Engineer I",
+      company: "Iowa State University",
+      period: "2020",
+      description: [
+        "Improved crop loss predictions by applying MATLAB for in-depth satellite imagery analysis.",
+        "Enhanced data analytics and backup efficiency by scripting automated SQL operations, leading to streamlined data analytics.",
+        "Boosted file system flexibility in research by pioneering VM products compatible with ext4 file systems.",
+        "Engineered GPS tagging and third-party integration for digital agriculture solutions.",
+        "Increased efficiency in documentation and image capture by developing a custom Android app."
+      ],
+    },
+    {
+      title: "Graduate Research Assistant – Digital Ag",
+      company: "Iowa State University",
+      period: "2019",
+      description: [
+        "Improved data accuracy by 30% in precision agriculture by engineering advanced vision systems and implementing them using MATLAB and LabVIEW.",
+        "Enhanced data logger functionality by pioneering Linux-based development techniques, leading to more robust data collection systems.",
+        "Refined object sensing capabilities across diverse terrains by spearheading tailored solutions for complex environments.",
+        "Advanced machinery data logging systems by pioneering innovative designs, increasing operational efficiency in data collection.",
+        "Implemented vision systems and mapping tools for precision agriculture, developed using MATLAB and LabVIEW to enhance operational accuracy."
+      ],
+    },
+    {
+      title: "Advanced Manufacturing Engineering Coop",
+      company: "GE Appliances",
+      period: "Fall 2018",
+      description: [
+        "Enhanced inventory management accuracy by 20% by creating and implementing a robust embedded inventory control label system.",
+        "Increased product quality consistency by 15% by fine-tuning test sequences for optimal quality assurance.",
+        "Improved quality control efficiency by 25% by ensuring quality in new product builds through meticulous testing.",
+        "Reduced defect rates by 30% by analyzing and improving camera testing systems for critical quality control"
+      ],
+    },
   ],
-  skills: ["Python", "ML Modelling", "C++", "TensorFlow", "OpenCV", "PyTorch"],
-};
 
-// Skills Section
-export const skillsInfo = {
-  technicalSkills: [
-    { name: "Python", level: 95 },
-    { name: "TensorFlow/PyTorch", level: 80 },
-    { name: "Machine Learning", level: 80 },
-    { name: "Data Engineering", level: 85 },
-    { name: "Computer Vision", level: 70 },
-    { name: "C++", level: 75 },
-    { name: "SQL", level: 65 },
-    { name: "Docker/Kubernetes", level: 65 },
-    { name: "MATLAB", level: 55 },
+  projectsInfo: [
+    {
+      title: "Residue Project",
+      description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
+      tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
+      github: "https://github.com/jiztom/residue-project",
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Multi-spectral Image Analysis",
+      description: "Created a comprehensive analysis system for multi-spectral imagery in agriculture, integrating data from various sensors to provide actionable insights on crop health, soil conditions, and yield prediction.",
+      tech: ["Python", "MATLAB", "Image Processing", "Deep Learning"],
+      github: "https://github.com/jiztom/multi-spectral-analysis",
+      showGithub: true,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Sound-Based Insect Detection",
+      description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
+      tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
+      // github: "https://github.com/jiztom/acoustic-pest-detection",
+      showGithub: true,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Agricultural Data Pipeline",
+      description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
+      tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
+      github: "https://github.com/jiztom/agri-data-pipeline",
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Loyola Alumni National Summit 2025 website",
+      description: "Developed a dedicated website to facilitate alumni engagement for Loyola Chennai's 100-year celebration in Dallas, USA. Built using Lovable.dev, the platform was customized to meet user needs, ensuring seamless accessibility and functionality. ",
+      tech: ["Php", "Lovable AI", "Docker", "typescript"],
+      github: "https://github.com/slezoric/loyola-alumini-national-summit-2025",
+      showGithub: true,
+      live: "https://loyola-alumini-national-summit-2025.lovable.app/",
+      showLive: true,
+    },
+    {
+      title: "Registration Desk QR Code generator - Zeffy integration",
+      description: "Designed and developed a WebApp for on-site event registration, generating custom QR codes to streamline networking among attendees at the Loyola Alumni Summit. Built using Lovable AI, the platform enhanced connectivity and engagement for registered members.",
+      tech: ["Php", "Lovable AI", "Docker", "typescript"],
+      github: "https://github.com/slezoric/loyola-alumini-label-maker",
+      showGithub: true,
+      live: "https://loyola-alumini-label-maker.lovable.app/",
+      showLive: true,
+    },
+    {
+      title: "Jiztom's Portfolio",
+      description: "Designed and developed a interactive portfolio with updated and working data with live interactions.",
+      tech: ["Php", "Lovable AI", "Docker", "typescript"],
+      github: "https://github.com/slezoric/loyola-alumini-label-maker",
+      showGithub: false,
+      live: "https://jiztom-portfolio.lovable.app/",
+      showLive: true,
+    },
   ],
-  languages: [
-    { name: "English", level: "Native" },
-    { name: "Malayalam", level: "Native" },
-    { name: "Hindi", level: "Fluent" },
-    { name: "Tamil", level: "Native" },
-    { name: "French", level: "Professional" },
-    { name: "German", level: "Professional" },
+
+  publicationsInfo: [
+    {
+      title: "Multivariate Temporal Regression at Scale: A Three-Pillar Framework Combining ML, XAI and NLP",
+      journal: "IEEE - International Conference on Electrical, Computer, and Energy Technologies",
+      year: 2025,
+      authors: "J.F Kavalakkatt, M.J Darr",
+      doi: "",
+      abstract: "This paper introduces a novel framework that accelerates the discovery of actionable relationships in high-dimensional temporal data by integrating machine learning (ML), explainable AI (XAI), and natural language processing (NLP) to enhance data quality and streamline workflows. Traditional methods often fail to recognize complex temporal relationships, leading to noisy, redundant, or biased datasets. Our approach combines ML-driven pruning to identify and mitigate low-quality samples, XAI-based interpretability to validate critical feature interactions, and NLP for future contextual validation, reducing the time required to uncover actionable insights by 40–60% . Evaluated on real-world agricultural and synthetic datasets, the framework significantly improves performance metrics (e.g., MSE, $R^2$, MAE) and computational efficiency, with hardware-agnostic scalability across diverse platforms. While long-term real-world impacts (e.g., cost savings, sustainability gains) are pending, this methodology provides an immediate pathway to accelerate data-centric AI in dynamic domains like agriculture and energy, enabling faster iteration cycles for domain experts.",
+      type: "IEEE Conference",
+    },
+    {
+      title: "Efficient Data Pipelines for Agricultural Machine Vision Systems",
+      conference: "IEEE - International Conference on Machine Learning and Application",
+      year: 2023,
+      authors: "J.F Kavalakkatt,C. Kumar,J. Herrera-Gerena, K. Kumar, M.J Darr",
+      doi: "10.1109/ICMLA55696.2022.00125",
+      abstract: "We propose a deep learning methodology for multivariable regression based on pattern recognition that triggers fast learning over sensor data. We used a conversion of sensors-to-image, which enables us to take advantage of Computer Vision architectures and training processes. In addition to this data preparation methodology, we explore using state-of-the-art architectures to generate regression outputs to predict agricultural crop continuous yield information. Finally, we compare with some top models reported in MLCAS2021. We found that using a straightforward training process, we were able to accomplish an MAE of 4.394, RMSE of 5.945, and R2 of 0.861.",
+      type: "IEEE conference",
+    },
   ],
+
+  educationInfo: [
+    {
+      degree: "Ph.D. in Computer Engineering",
+      school: "Iowa State University",
+      period: "December 2025",
+      gpa: "3.82",
+    },
+    {
+      degree: "Master's in Computer Engineering",
+      school: "Iowa State University",
+      period: "December 2019",
+      gpa: "3.92",
+    },
+    {
+      degree: "Bachelor's in Electrical Engineering",
+      school: "Anna University",
+      period: "May 2017",
+      gpa: "7.6",
+    },
+  ],
+
+  testimonialsInfo: [
+    {
+      quote: "Jiztom's expertise in AI and agriculture has been instrumental in advancing our research initiatives. His innovative approaches to complex problems consistently deliver exceptional results.",
+      name: "Dr. M J Darr",
+      title: "Professor, Iowa State University"
+    },
+    {
+      quote: "Working with Jiztom on the agricultural data pipeline project transformed our approach to data analysis. His technical skills and domain knowledge made a significant impact on our operations.",
+      name: "Chandan Kumar",
+      title: "Research Assistant, Oak Ridge National Lab (Iowa State University)"
+    },
+    {
+      quote: "The sound-based insect detection system developed by Jiztom represents a breakthrough in pest management technology. His work combines technical excellence with practical agricultural applications.",
+      name: "Peter Hong",
+      title: "Director, ISU Startup Factory, Iowa State University"
+    },
+  ],
+
+  navLinks: [
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Publications", href: "#publications" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Hobbies", href: "#hobbies" },
+    { name: "Education", href: "#education" },
+    { name: "Contact", href: "#contact" },
+  ],
+
+  styling: {
+    primaryColor: "indigo-500",
+    secondaryColor: "purple-500",
+    accentColor: "pink-500",
+    gradients: {
+      hero: "from-indigo-500 via-purple-500 to-pink-500",
+      about: "from-indigo-50 via-white to-purple-50",
+      skills: "from-white to-white",
+      experience: "from-purple-50 via-white to-blue-50",
+      projects: "from-white to-white",
+      publications: "from-blue-50 via-white to-indigo-50",
+      testimonials: "from-purple-50 to-indigo-50",
+      hobbies: "from-white to-white",
+      education: "from-blue-50 via-white to-purple-50",
+      contact: "from-white to-white",
+    },
+  },
+
+  features: {
+    showHero: true,
+    showAbout: true,
+    showSkills: true,
+    showExperience: true,
+    showProjects: true,
+    showPublications: true,
+    showTestimonials: true,
+    showHobbies: true,
+    showEducation: true,
+    showContact: true,
+  },
+
+  ui: {
+    hero: {
+      contactButton: "Contact Me",
+      downloadButton: "Download CV",
+    },
+    common: {
+      viewProject: "View Project",
+      viewCode: "View Code",
+    },
+  },
 };
 
-// Experience Section
-export const experienceInfo = [
-  {
-    title: "Graduate Research Assistant",
-    company: "Iowa State University",
-    period: "2020 - Present",
-    description: [
-      "Enhanced open-world detection capabilities by utilizing advanced image processing techniques and machine learning algorithms, layering data on images for improved machine learning applications.",
-      "Improved data handling efficiency by 30% by designing and implementing SQL Server data loaders and preprocessing pipelines.",
-      "Increased accuracy of image-based predictions by 25% by refining and optimizing machine learning algorithms for agri-tech applications.",
-      "Enhanced field accuracy in insect detection by pioneering novel sound-based detection techniques.",
-      "Boosted user engagement and decision-making by 40% by streamlining and optimizing data visualization tools for agricultural data."
-    ],
-  },
-  {
-    title: "Data Science and Engineering Intern",
-    company: "3M",
-    period: "Summer 2023",
-    description: [
-      "Enhanced airflow sensor testing efficiency by 15% in the Dewey Duct Project by designing and implementing advanced testing protocols",
-      "Increased accuracy of wound imagery modeling by contributing to the integration and refinement of U-Net based data pipeline techniques.",
-      "Improved real-time data visualization capabilities by developing the Wanda Vision Platform, a sensor data visualization tool.",
-      "Fostered innovation and effective project ideation by facilitating cross-functional team collaborations and brainstorming sessions.",
-      "Delivered impactful results through innovative solutions by engaging in cross-functional team collaboration and idea generation."
-    ],
-  },
-  {
-    title: "Engineer Designer II/ Engineer I",
-    company: "Iowa State University",
-    period: "2020",
-    description: [
-      "Improved crop loss predictions by applying MATLAB for in-depth satellite imagery analysis.",
-      "Enhanced data analytics and backup efficiency by scripting automated SQL operations, leading to streamlined data analytics.",
-      "Boosted file system flexibility in research by pioneering VM products compatible with ext4 file systems.",
-      "Engineered GPS tagging and third-party integration for digital agriculture solutions.",
-      "Increased efficiency in documentation and image capture by developing a custom Android app."
-    ],
-  },
-  {
-    title: "Graduate Research Assistant – Digital Ag",
-    company: "Iowa State University",
-    period: "2019",
-    description: [
-      "Improved data accuracy by 30% in precision agriculture by engineering advanced vision systems and implementing them using MATLAB and LabVIEW.",
-      "Enhanced data logger functionality by pioneering Linux-based development techniques, leading to more robust data collection systems.",
-      "Refined object sensing capabilities across diverse terrains by spearheading tailored solutions for complex environments.",
-      "Advanced machinery data logging systems by pioneering innovative designs, increasing operational efficiency in data collection.",
-      "Implemented vision systems and mapping tools for precision agriculture, developed using MATLAB and LabVIEW to enhance operational accuracy."
-    ],
-  },
-  {
-    title: "Advanced Manufacturing Engineering Coop",
-    company: "GE Appliances",
-    period: "Fall 2018",
-    description: [
-      "Enhanced inventory management accuracy by 20% by creating and implementing a robust embedded inventory control label system.",
-      "Increased product quality consistency by 15% by fine-tuning test sequences for optimal quality assurance.",
-      "Improved quality control efficiency by 25% by ensuring quality in new product builds through meticulous testing.",
-      "Reduced defect rates by 30% by analyzing and improving camera testing systems for critical quality control"
-    ],
-  },
-];
-
-// Projects Section
-export const projectsInfo = [
-  {
-    title: "Residue Project",
-    description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
-    tech: ["Python", "TensorFlow", "OpenCV", "PyTorch", "SQL"],
-    github: "https://github.com/jiztom/residue-project",
-    showGithub: false,
-    live: "",
-    showLive: false,
-  },
-  {
-    title: "Multi-spectral Image Analysis",
-    description: "Created a comprehensive analysis system for multi-spectral imagery in agriculture, integrating data from various sensors to provide actionable insights on crop health, soil conditions, and yield prediction.",
-    tech: ["Python", "MATLAB", "Image Processing", "Deep Learning"],
-    github: "https://github.com/jiztom/multi-spectral-analysis",
-    showGithub: true,
-    live: "",
-    showLive: false,
-  },
-  {
-    title: "Sound-Based Insect Detection",
-    description: "Pioneered an innovative acoustic monitoring system that uses machine learning to identify and classify agricultural pests based on their distinctive sounds, providing early warning for farmers.",
-    tech: ["Python", "TensorFlow", "Signal Processing", "IoT"],
-    // github: "https://github.com/jiztom/acoustic-pest-detection",
-    showGithub: true,
-    live: "",
-    showLive: false,
-  },
-  {
-    title: "Agricultural Data Pipeline",
-    description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
-    tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
-    github: "https://github.com/jiztom/agri-data-pipeline",
-    showGithub: false,
-    live: "",
-    showLive: false,
-  },
-  {
-    title: "Loyola Alumni National Summit 2025 website",
-    description: "Developed a dedicated website to facilitate alumni engagement for Loyola Chennai's 100-year celebration in Dallas, USA. Built using Lovable.dev, the platform was customized to meet user needs, ensuring seamless accessibility and functionality. ",
-    tech: ["Php", "Lovable AI", "Docker", "typescript"],
-    github: "https://github.com/slezoric/loyola-alumini-national-summit-2025",
-    showGithub: true,
-    live: "https://loyola-alumini-national-summit-2025.lovable.app/",
-    showLive: true,
-  },
-  {
-    title: "Registration Desk QR Code generator - Zeffy integration",
-    description: "Designed and developed a WebApp for on-site event registration, generating custom QR codes to streamline networking among attendees at the Loyola Alumni Summit. Built using Lovable AI, the platform enhanced connectivity and engagement for registered members.",
-    tech: ["Php", "Lovable AI", "Docker", "typescript"],
-    github: "https://github.com/slezoric/loyola-alumini-label-maker",
-    showGithub: true,
-    live: "https://loyola-alumini-label-maker.lovable.app/",
-    showLive: true,
-  },
-  {
-    title: "Jiztom's Portfolio",
-    description: "Designed and developed a interactive portfolio with updated and working data with live interactions.",
-    tech: ["Php", "Lovable AI", "Docker", "typescript"],
-    github: "https://github.com/slezoric/loyola-alumini-label-maker",
-    showGithub: false,
-    live: "https://jiztom-portfolio.lovable.app/",
-    showLive: true,
-  },
-];
-
-// Publications Section
-export const publicationsInfo = [
-  {
-    title: "Multivariate Temporal Regression at Scale: A Three-Pillar Framework Combining ML, XAI and NLP",
-    journal: "IEEE - International Conference on Electrical, Computer, and Energy Technologies",
-    year: 2025,
-    authors: "J.F Kavalakkatt, M.J Darr",
-    doi: "",
-    abstract: "This paper introduces a novel framework that accelerates the discovery of actionable relationships in high-dimensional temporal data by integrating machine learning (ML), explainable AI (XAI), and natural language processing (NLP) to enhance data quality and streamline workflows. Traditional methods often fail to recognize complex temporal relationships, leading to noisy, redundant, or biased datasets. Our approach combines ML-driven pruning to identify and mitigate low-quality samples, XAI-based interpretability to validate critical feature interactions, and NLP for future contextual validation, reducing the time required to uncover actionable insights by 40–60\% . Evaluated on real-world agricultural and synthetic datasets, the framework significantly improves performance metrics (e.g., MSE, $R^2$, MAE) and computational efficiency, with hardware-agnostic scalability across diverse platforms. While long-term real-world impacts (e.g., cost savings, sustainability gains) are pending, this methodology provides an immediate pathway to accelerate data-centric AI in dynamic domains like agriculture and energy, enabling faster iteration cycles for domain experts.",
-    type: "IEEE Conference",
-  },
-  {
-    title: "Efficient Data Pipelines for Agricultural Machine Vision Systems",
-    conference: "IEEE - International Conference on Machine Learning and Application",
-    year: 2023,
-    authors: "J.F Kavalakkatt,C. Kumar,J. Herrera-Gerena, K. Kumar, M.J Darr",
-    doi: "10.1109/ICMLA55696.2022.00125",
-    abstract: "We propose a deep learning methodology for multivariable regression based on pattern recognition that triggers fast learning over sensor data. We used a conversion of sensors-to-image, which enables us to take advantage of Computer Vision architectures and training processes. In addition to this data preparation methodology, we explore using state-of-the-art architectures to generate regression outputs to predict agricultural crop continuous yield information. Finally, we compare with some top models reported in MLCAS2021. We found that using a straightforward training process, we were able to accomplish an MAE of 4.394, RMSE of 5.945, and R2 of 0.861.",
-    type: "IEEE conference",
-  },
-];
-
-// Education Section
-export const educationInfo = [
-  {
-    degree: "Ph.D. in Computer Engineering",
-    school: "Iowa State University",
-    period: "December 2025",
-    gpa: "3.82",
-  },
-  {
-    degree: "Master's in Computer Engineering",
-    school: "Iowa State University",
-    period: "December 2019",
-    gpa: "3.92",
-  },
-  {
-    degree: "Bachelor's in Electrical Engineering",
-    school: "Anna University",
-    period: "May 2017",
-    gpa: "7.6",
-  },
-];
-
-// Testimonials Section
-export const testimonialsInfo = [
-  {
-    quote: "Jiztom's expertise in AI and agriculture has been instrumental in advancing our research initiatives. His innovative approaches to complex problems consistently deliver exceptional results.",
-    name: "Dr. M J Darr",
-    title: "Professor, Iowa State University"
-  },
-  {
-    quote: "Working with Jiztom on the agricultural data pipeline project transformed our approach to data analysis. His technical skills and domain knowledge made a significant impact on our operations.",
-    name: "Chandan Kumar",
-    title: "Research Assistant, Oak Ridge National Lab (Iowa State University)"
-  },
-  {
-    quote: "The sound-based insect detection system developed by Jiztom represents a breakthrough in pest management technology. His work combines technical excellence with practical agricultural applications.",
-    name: "Peter Hong",
-    title: "Director, ISU Startup Factory, Iowa State University"
-  },
-];
-
-// Navigation links
-export const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Publications", href: "#publications" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Hobbies", href: "#hobbies" },
-  { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
-];
-
-// Colors and styling
-export const styling = {
-  primaryColor: "indigo-500",
-  secondaryColor: "purple-500",
-  accentColor: "pink-500",
-  gradients: {
-    hero: "from-indigo-500 via-purple-500 to-pink-500",
-    about: "from-indigo-50 via-white to-purple-50",
-    skills: "from-white to-white",
-    experience: "from-purple-50 via-white to-blue-50",
-    projects: "from-white to-white",
-    publications: "from-blue-50 via-white to-indigo-50",
-    testimonials: "from-purple-50 to-indigo-50",
-    hobbies: "from-white to-white",
-    education: "from-blue-50 via-white to-purple-50",
-    contact: "from-white to-white",
-  },
-};
+// Export individual sections for backward compatibility while migrating
+export const {
+  personalInfo,
+  aboutInfo,
+  skillsInfo,
+  experienceInfo,
+  projectsInfo,
+  publicationsInfo,
+  educationInfo,
+  testimonialsInfo,
+  navLinks,
+  styling,
+} = portfolioConfig;

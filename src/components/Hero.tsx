@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
-import { personalInfo } from "@/config/portfolio-config";
+import { personalInfo, portfolioConfig } from "@/config/portfolio-config";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
             onClick={() => document.getElementById("contact")?.scrollIntoView()}
           >
             <Mail className="mr-2 h-4 w-4" />
-            Contact Me
+            {portfolioConfig.ui.hero.contactButton}
           </Button>
           <Button
             variant="default"
@@ -40,7 +40,7 @@ const Hero = () => {
             onClick={() => window.open(personalInfo.resumeUrl, "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
-            Download CV
+            {portfolioConfig.ui.hero.downloadButton}
           </Button>
         </div>
       </div>

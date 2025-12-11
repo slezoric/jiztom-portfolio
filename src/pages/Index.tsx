@@ -1,5 +1,6 @@
 
 import Navbar from "@/components/Navbar";
+import { portfolioConfig } from "@/config/portfolio-config";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -15,16 +16,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Publications />
-      <Testimonials />
-      <Hobbies />
-      <Education />
-      <Contact />
+      {portfolioConfig.features.showHero && <Hero />}
+      {portfolioConfig.features.showAbout && <About />}
+      {portfolioConfig.features.showSkills && <Skills />}
+      {portfolioConfig.features.showExperience && <Experience />}
+      {portfolioConfig.features.showProjects && <Projects />}
+      {portfolioConfig.features.showPublications && <Publications />}
+      {portfolioConfig.features.showTestimonials && <Testimonials />}
+      {portfolioConfig.features.showHobbies && <Hobbies />}
+      {portfolioConfig.features.showEducation && <Education />}
+      {portfolioConfig.features.showContact && <Contact />}
     </div>
   );
 };
