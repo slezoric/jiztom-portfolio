@@ -48,9 +48,29 @@ export const portfolioConfig: PortfolioConfig = {
 
   experienceInfo: [
     {
+      title: "Lead Developer, DSP Application",
+      company: "Make Believe Studios",
+      period: "December 2025 - Present",
+      description: [
+        "Developed high-performance audio plugins compatible with major Digital Audio Workstations (DAWs), utilizing the JUCE Framework.",
+        "Engineered optimized C++ code for real-time audio modulation and tuning, ensuring low-latency execution and stability.",
+        "Implemented Test-Driven Development (TDD) methodologies using GoogleTest (GTest) to rigorously validate code quality and streamline debugging."
+      ],
+    },
+    {
+      title: "Chief Technology Officer",
+      company: "LumenWorks LLC",
+      period: "September 2025 - Present",
+      description: [
+        "Architect and deliver custom web solutions for small businesses via a subscription model, implementing advanced SEO strategies to maximize digital presence.",
+        "Lead end-to-end R&D initiatives for bespoke hardware and software projects, managing the full lifecycle from rapid prototyping to production deployment.",
+        "Design and integrate custom applied AI tools and plugins to automate workflows and enhance business application capabilities."
+      ],
+    },
+    {
       title: "Graduate Research Assistant",
       company: "Iowa State University",
-      period: "2020 - Present",
+      period: "Jan 2021 - June 2025",
       description: [
         "Enhanced open-world detection capabilities by utilizing advanced image processing techniques and machine learning algorithms, layering data on images for improved machine learning applications.",
         "Improved data handling efficiency by 30% by designing and implementing SQL Server data loaders and preprocessing pipelines.",
