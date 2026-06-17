@@ -32,9 +32,9 @@ const AnimatedBackground = () => {
     const colorArray = new Float32Array(particlesCount * 3);
 
     const palette = [
-      new THREE.Color('#06b6d4'),
-      new THREE.Color('#2563eb'),
-      new THREE.Color('#4f46e5'),
+      new THREE.Color('#1d4ed8'), // blue-700
+      new THREE.Color('#4f46e5'), // indigo-600
+      new THREE.Color('#7c3aed'), // violet-600
     ];
 
     for (let i = 0; i < particlesCount; i++) {

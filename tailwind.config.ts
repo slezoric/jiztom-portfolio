@@ -37,13 +37,13 @@ export default {
           light: "#3b82f6",
         },
         accent: {
-          DEFAULT: "#06b6d4",
-          light: "#22d3ee",
+          DEFAULT: "#7c3aed",
+          light: "#8b5cf6",
         },
         brand: {
-          cyan: "#06b6d4",
-          blue: "#2563eb",
+          blue: "#1d4ed8",
           indigo: "#4f46e5",
+          violet: "#7c3aed",
         },
       },
       keyframes: {

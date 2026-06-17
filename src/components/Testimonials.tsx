@@ -33,7 +33,7 @@ const Testimonials = () => {
                   <Quote className="h-9 w-9 text-blue-500/25 mb-4" />
                   <p className="text-lg leading-relaxed text-slate-700">{t.quote}</p>
                   <div className="flex items-center mt-6">
-                    <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-cyan-500 to-indigo-600 text-white font-bold text-lg">
+                    <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-blue-600 to-violet-600 text-white font-bold text-lg">
                       {t.name.charAt(0)}
                     </div>
                     <div className="ml-4">

@@ -23,7 +23,7 @@ const Hero = () => {
 
         <div className="mt-8 flex justify-center animate-fade-in-up">
           <div className="relative">
-            <div className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-600 to-indigo-600 opacity-70 blur-[2px]" />
+            <div className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 opacity-70 blur-[2px]" />
             <img
               src={personalInfo.profileImage}
               alt={personalInfo.name}

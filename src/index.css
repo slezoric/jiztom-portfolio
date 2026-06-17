@@ -11,10 +11,10 @@
     --input: 214 32% 91%;
     --ring: 221 83% 53%;
 
-    /* Brand spectrum */
-    --brand-1: 188 94% 43%; /* cyan */
-    --brand-2: 217 91% 53%; /* blue */
-    --brand-3: 243 75% 59%; /* indigo */
+    /* Brand spectrum — darkened for WCAG-AA contrast on white */
+    --brand-1: 224 76% 48%; /* blue-700 */
+    --brand-2: 243 75% 59%; /* indigo-600 */
+    --brand-3: 262 83% 58%; /* violet-600 */
 
     --ink: 222 47% 11%;
     --surface: 0 0% 100%;
@@ -32,8 +32,8 @@
   body {
     @apply bg-background text-foreground antialiased font-sans;
     background-image:
-      radial-gradient(60rem 60rem at 110% -10%, hsl(243 75% 59% / 0.06), transparent 60%),
-      radial-gradient(50rem 50rem at -10% 10%, hsl(188 94% 43% / 0.06), transparent 55%);
+      radial-gradient(60rem 60rem at 110% -10%, hsl(262 83% 58% / 0.06), transparent 60%),
+      radial-gradient(50rem 50rem at -10% 10%, hsl(224 76% 48% / 0.06), transparent 55%);
     background-attachment: fixed;
   }
 
@@ -66,16 +66,17 @@
 
   /* Small uppercase label above headings */
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 mb-3;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700 mb-3;
   }
 
   .heading {
     @apply text-3xl sm:text-4xl font-bold text-slate-900;
   }
 
-  /* Working static gradient text (replaces broken dynamic classes) */
+  /* Working static gradient text (replaces broken dynamic classes).
+     Stops kept at 600-700 so headings clear WCAG-AA contrast on white. */
   .text-gradient {
-    @apply bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-600 bg-clip-text text-transparent;
   }
 
   /* Legacy hook kept for any leftover usages */
@@ -116,7 +117,7 @@
     @apply h-2 w-full rounded-full bg-slate-200/80 overflow-hidden;
   }
   .skill-fill {
-    @apply h-full rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600;
+    @apply h-full rounded-full bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-600;
     transition: width 1100ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -125,7 +126,7 @@
     @apply relative border-l border-slate-200 pl-8 sm:pl-10;
   }
   .timeline-dot {
-    @apply absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-gradient-to-br from-cyan-500 to-indigo-600 ring-4 ring-white;
+    @apply absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-gradient-to-br from-blue-600 to-violet-600 ring-4 ring-white;
   }
 
   .nav-link {
