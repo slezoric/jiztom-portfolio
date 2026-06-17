@@ -21,8 +21,13 @@ export interface Skill {
   level: number | string;
 }
 
+export interface SkillCategory {
+  name: string;
+  skills: string[];
+}
+
 export interface SkillsInfo {
-  technicalSkills: Skill[];
+  categories: SkillCategory[];
   languages: Skill[];
 }
 

@@ -102,7 +102,7 @@ const Contact = () => {
             <input name="_honey_pot" type="text" style={{ display: 'none' }} />
             
             {/* Hidden field for recipient email */}
-            <input type="hidden" name="_to" value="jiztom@gmail.com" />
+            <input type="hidden" name="_to" value={personalInfo.email} />
             
             <Input
               name="name"

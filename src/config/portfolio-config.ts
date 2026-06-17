@@ -8,9 +8,9 @@ export const portfolioConfig: PortfolioConfig = {
   personalInfo: {
     name: "Dr. Jiztom Kavalakkatt Francis",
     shortName: "Dr. Jiztom",
-    title: "Data Engineer | Data Quality Researcher | Prototyping Engineer",
-    description: "Pioneering AI innovation through machine vision and deep learning",
-    email: "jiztom@iastate.edu",
+    title: "PhD Computer Engineer | AI/ML · Data Science · Embedded Systems",
+    description: "From terabyte-scale ML pipelines to safety-critical embedded firmware and real-time DSP.",
+    email: "kfjiztom@gmail.com",
     linkedin: "https://linkedin.com/in/jiztom",
     github: "https://github.com/jiztom",
     resumeUrl: "/resume.pdf",
@@ -19,22 +19,34 @@ export const portfolioConfig: PortfolioConfig = {
 
   aboutInfo: {
     paragraphs: [
-      "PhD Holder in Computer Engineering and Python AI Engineer dedicated to turning agricultural expertise into high-quality data that powers precision models. Expert in machine vision, regression modeling, and data pipeline optimization — delivering scalable AI solutions that drive real-world impact in digital agriculture."
+      "PhD Computer Engineer working across the full stack of intelligent systems — from the sensor and the firmware that reads it, to the data pipeline that cleans it, to the model that learns from it. I build CNN/Transformer pipelines in PyTorch for sensor-to-image regression, write deterministic C/C++ firmware and drivers (CAN/J1939, UART, SPI, I2C, ADC) for field-deployed agricultural equipment, and ship real-time C++ audio DSP under sub-millisecond latency constraints.",
+      "Three IEEE publications, a 22% gain in field-segmentation precision, and ~30% faster preprocessing on terabyte-scale datasets — my work pairs research depth with production discipline: lock-free concurrency, test-driven development, and HIL-style validation. I'm targeting roles in AI engineering, data science, and custom embedded systems where that hardware-to-model range is an advantage."
     ],
-    skills: ["Python", "ML Modelling", "C++", "TensorFlow", "OpenCV", "PyTorch"],
+    skills: ["AI / ML", "Data Science", "Embedded Systems", "Computer Vision", "Real-Time DSP", "C/C++"],
   },
 
   skillsInfo: {
-    technicalSkills: [
-      { name: "Python", level: 95 },
-      { name: "TensorFlow/PyTorch", level: 80 },
-      { name: "Machine Learning", level: 80 },
-      { name: "Data Engineering", level: 85 },
-      { name: "Computer Vision", level: 70 },
-      { name: "C++", level: 75 },
-      { name: "SQL", level: 65 },
-      { name: "Docker/Kubernetes", level: 65 },
-      { name: "MATLAB", level: 55 },
+    categories: [
+      {
+        name: "AI / ML & Computer Vision",
+        skills: ["Python", "PyTorch", "TensorFlow", "Machine Learning", "CNNs / Transformers", "OpenCV", "Computer Vision", "LLMs", "Edge Inference", "Sensor Fusion"],
+      },
+      {
+        name: "Data Engineering & MLOps",
+        skills: ["SQL", "ETL", "Data Pipelines", "QuestDB", "Grafana", "Docker", "REST APIs", "Azure", "DevOps", "MATLAB"],
+      },
+      {
+        name: "Embedded & Firmware",
+        skills: ["C / C++", "Real-Time Systems", "FreeRTOS", "ARM Cortex-M", "ESP32", "RISC-V", "AVR", "CAN / J1939", "UART / SPI / I2C", "ADC/DAC · GPIO · PWM", "BLE", "Linux / Unix", "Assembly"],
+      },
+      {
+        name: "Hardware, Sensors & Test",
+        skills: ["LiDAR", "Radar", "Stereo Vision", "GPS / GNSS", "IMU", "Oscilloscopes", "Logic Analyzers", "CAN-Bus Analyzers", "JTAG / SWD", "Segger J-Link", "Wireshark", "Root-Cause Analysis"],
+      },
+      {
+        name: "Quality, Safety & Tooling",
+        skills: ["Test-Driven Development", "GoogleTest", "DOE Methodology", "Functional Safety", "ISO 26262", "IEC 61508", "ISO 15118", "Git", "CMake / Make", "GCC / GDB"],
+      },
     ],
     languages: [
       { name: "English", level: "Native" },
@@ -48,13 +60,13 @@ export const portfolioConfig: PortfolioConfig = {
 
   experienceInfo: [
     {
-      title: "Lead Developer, DSP Application",
-      company: "Make Believe Studios",
+      title: "Lead Developer, Real-Time DSP / C++",
+      company: "Make Believe Studio",
       period: "December 2025 - Present",
       description: [
-        "Developed high-performance audio plugins compatible with major Digital Audio Workstations (DAWs), utilizing the JUCE Framework.",
-        "Engineered optimized C++ code for real-time audio modulation and tuning, ensuring low-latency execution and stability.",
-        "Implemented Test-Driven Development (TDD) methodologies using GoogleTest (GTest) to rigorously validate code quality and streamline debugging."
+        "Ship production C++ audio plugins (JUCE) under hard real-time constraints — lock-free audio threads, sub-millisecond latency, and deterministic execution across major DAWs.",
+        "Apply the same concurrency, threading, and timing discipline required for safety-critical embedded firmware directly to the audio signal path.",
+        "Drive Test-Driven Development with GoogleTest across the build pipeline to lock in code quality and accelerate debugging."
       ],
     },
     {
@@ -68,67 +80,104 @@ export const portfolioConfig: PortfolioConfig = {
       ],
     },
     {
-      title: "Graduate Research Assistant",
+      title: "PhD Research — Embedded ML & Machine Vision",
       company: "Iowa State University",
-      period: "Jan 2021 - June 2025",
+      period: "January 2021 - May 2025",
       description: [
-        "Enhanced open-world detection capabilities by utilizing advanced image processing techniques and machine learning algorithms, layering data on images for improved machine learning applications.",
-        "Improved data handling efficiency by 30% by designing and implementing SQL Server data loaders and preprocessing pipelines.",
-        "Increased accuracy of image-based predictions by 25% by refining and optimizing machine learning algorithms for agri-tech applications.",
-        "Enhanced field accuracy in insect detection by pioneering novel sound-based detection techniques.",
-        "Boosted user engagement and decision-making by 40% by streamlining and optimizing data visualization tools for agricultural data."
+        "Built CNN/Transformer pipelines in PyTorch for sensor-to-image regression on CAN- and LiDAR-derived telemetry, improving field-segmentation precision by 22% and open-world detection accuracy by 18%.",
+        "Cut preprocessing time ~30% on terabyte-scale datasets via scalable SQL Server data loaders, chunked ETL, and parallel I/O workers — raising GPU training throughput.",
+        "Published a novel pattern-based methodology for multivariate temporal regression across three peer-reviewed IEEE venues.",
+        "Raised insect-detection rates 25% with 1D-CNN classifiers on spectrogram features for early-warning pest monitoring.",
+        "Profiled memory bottlenecks and tuned DataLoader concurrency to streamline training workflows across a multi-investigator lab."
       ],
     },
     {
-      title: "Data Science and Engineering Intern",
+      title: "Graduate Research Engineer — Digital Agriculture (DigitalAg Lab)",
+      company: "Iowa State University",
+      period: "January 2019 - December 2024",
+      description: [
+        "Owned firmware, perception integration, and test infrastructure for field-deployed agricultural heavy equipment (tractors, combines, sprayers).",
+        "Designed and deployed a custom GPS + CAN field tagger end-to-end — schematic, transceiver selection, GNSS-over-UART integration, C firmware, and on-vehicle validation — broadcasting time-synchronized georeferenced events onto the equipment CAN network.",
+        "Wrote C/C++ peripheral drivers (UART, SPI, I2C, ADC, GPIO, CAN) under deterministic schedulers; shipped Linux firmware that raised field-acquisition efficiency ~30% via optimized I/O scheduling and interrupt-driven reads.",
+        "Built CAN / J1939 extraction systems that decoded vehicle-bus and ECU telemetry into clean, structured datasets for downstream analytics and ML pipelines.",
+        "Developed automated calibration routines for perception sensors and analog chains (LiDAR, radar, stereo/mono cameras, GPS/GNSS, ADC front ends), handling time synchronization and fusion for in-field testing.",
+        "Built HIL-style validation rigs and triaged field issues via root-cause analysis on oscilloscopes, logic analyzers, and CAN-bus analyzers during board bring-up."
+      ],
+    },
+    {
+      title: "Data & Embedded Systems Intern",
       company: "3M",
-      period: "Summer 2023",
+      period: "May 2023 - August 2023",
       description: [
-        "Enhanced airflow sensor testing efficiency by 15% in the Dewey Duct Project by designing and implementing advanced testing protocols",
-        "Increased accuracy of wound imagery modeling by contributing to the integration and refinement of U-Net based data pipeline techniques.",
-        "Improved real-time data visualization capabilities by developing the Wanda Vision Platform, a sensor data visualization tool.",
-        "Fostered innovation and effective project ideation by facilitating cross-functional team collaborations and brainstorming sessions.",
-        "Delivered impactful results through innovative solutions by engaging in cross-functional team collaboration and idea generation."
+        "Built a real-time sensor-visualization platform (Python + SQL) ingesting streaming telemetry from embedded sensor nodes, surfacing operational insights for production engineers.",
+        "Improved airflow-sensor test efficiency 15% with a DOE-driven (Minitab) methodology that eliminated redundant cycles at the hardware/software boundary.",
+        "Defined test-system architecture alongside cross-functional EE / ME / firmware engineers."
       ],
     },
     {
-      title: "Engineer Designer II/ Engineer I",
+      title: "Engineer Designer II / Engineer I",
       company: "Iowa State University",
-      period: "2020",
+      period: "January 2020 - December 2020",
       description: [
-        "Improved crop loss predictions by applying MATLAB for in-depth satellite imagery analysis.",
-        "Enhanced data analytics and backup efficiency by scripting automated SQL operations, leading to streamlined data analytics.",
-        "Boosted file system flexibility in research by pioneering VM products compatible with ext4 file systems.",
-        "Engineered GPS tagging and third-party integration for digital agriculture solutions.",
-        "Increased efficiency in documentation and image capture by developing a custom Android app."
+        "Engineered an offline-first Android app for field documentation, improving capture efficiency 40% through structured metadata and seamless external-system sync.",
+        "Built CI/CD workflows (Python + Bash) for SQL analytics and backup automation, cutting data-processing time 50% on multi-terabyte datasets in Azure.",
+        "Standardized reproducible compute environments with ext4-backed VM appliances across operating systems.",
+        "Applied MATLAB to satellite-imagery analysis via NDVI/EVI vegetation-index thresholding, improving crop-loss prediction accuracy 20%."
       ],
     },
     {
-      title: "Graduate Research Assistant – Digital Ag",
-      company: "Iowa State University",
-      period: "2019",
-      description: [
-        "Improved data accuracy by 30% in precision agriculture by engineering advanced vision systems and implementing them using MATLAB and LabVIEW.",
-        "Enhanced data logger functionality by pioneering Linux-based development techniques, leading to more robust data collection systems.",
-        "Refined object sensing capabilities across diverse terrains by spearheading tailored solutions for complex environments.",
-        "Advanced machinery data logging systems by pioneering innovative designs, increasing operational efficiency in data collection.",
-        "Implemented vision systems and mapping tools for precision agriculture, developed using MATLAB and LabVIEW to enhance operational accuracy."
-      ],
-    },
-    {
-      title: "Advanced Manufacturing Engineering Coop",
+      title: "Advanced Manufacturing Engineering Co-Op",
       company: "GE Appliances",
-      period: "Fall 2018",
+      period: "August 2018 - December 2018",
       description: [
-        "Enhanced inventory management accuracy by 20% by creating and implementing a robust embedded inventory control label system.",
-        "Increased product quality consistency by 15% by fine-tuning test sequences for optimal quality assurance.",
-        "Improved quality control efficiency by 25% by ensuring quality in new product builds through meticulous testing.",
-        "Reduced defect rates by 30% by analyzing and improving camera testing systems for critical quality control"
+        "Designed and deployed an embedded inventory-control system (barcode scanners over UART, MCU-driven label triggering, SQL reconciliation), improving tracking accuracy 20%.",
+        "Reduced testing errors 15% by optimizing automated test sequences and camera-based vision-test rigs across the appliance production line."
+      ],
+    },
+    {
+      title: "Embedded Firmware Engineer (Senior Design)",
+      company: "Hochschule Heilbronn — Germany",
+      period: "February 2017 - March 2017",
+      description: [
+        "Delivered ISO 15118-compliant display-driver firmware for a 4th-generation EV charging station (C++ / EBGuide HMI).",
+        "Led a 3-engineer team through driver development, hardware integration, CAN communication, and on-station debugging."
       ],
     },
   ],
 
   projectsInfo: [
+    {
+      title: "GPS + CAN Field Tagger",
+      description: "Designed and deployed a custom on-vehicle hardware module end-to-end — schematic, transceiver selection, GNSS-over-UART integration, and C firmware — that broadcasts time-synchronized, georeferenced events onto an agricultural equipment CAN network for downstream data fusion.",
+      tech: ["C", "Embedded Firmware", "CAN / J1939", "GNSS / UART", "PCB Design"],
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Real-Time Audio DSP Plugins",
+      description: "Production C++ audio plugins built on the JUCE framework, running on lock-free audio threads with sub-millisecond latency across major DAWs. Validated with a Test-Driven Development pipeline (GoogleTest) for deterministic, real-time-safe behavior.",
+      tech: ["C++", "JUCE", "Real-Time DSP", "GoogleTest", "Lock-Free"],
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "CAN / J1939 Telemetry Extraction",
+      description: "Built an extraction and decoding pipeline that turns raw vehicle-bus and ECU traffic into clean, structured datasets — bridging embedded telemetry with downstream analytics and ML training pipelines.",
+      tech: ["C++", "CAN / J1939", "Python", "ETL"],
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Sensor-to-Image Regression Framework",
+      description: "A deep-learning methodology that converts multivariate sensor streams into images, unlocking computer-vision architectures for continuous agricultural yield regression. Benchmarked against MLCAS2021 leaders, achieving MAE 4.39 / RMSE 5.95 / R² 0.861.",
+      tech: ["Python", "PyTorch", "Computer Vision", "Transformers", "Regression"],
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
     {
       title: "Residue Project",
       description: "Developed an advanced computer vision and machine learning pipeline to automate the assessment of crop residue coverage in agricultural fields, enabling precision farming and sustainable practices.",
@@ -219,19 +268,19 @@ export const portfolioConfig: PortfolioConfig = {
     {
       degree: "Ph.D. in Computer Engineering",
       school: "Iowa State University",
-      period: "December 2025",
+      period: "January 2021 - December 2025",
       gpa: "3.82",
     },
     {
-      degree: "Master's in Computer Engineering",
+      degree: "M.S. in Computer Engineering",
       school: "Iowa State University",
-      period: "December 2019",
+      period: "August 2017 - December 2019",
       gpa: "3.92",
     },
     {
-      degree: "Bachelor's in Electrical Engineering",
-      school: "Anna University",
-      period: "May 2017",
+      degree: "B.S. in Electrical Engineering",
+      school: "Anna University, India",
+      period: "2013 - 2017",
       gpa: "7.6",
     },
   ],
