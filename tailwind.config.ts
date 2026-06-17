@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -29,12 +33,17 @@ export default {
           light: "#1e293b",
         },
         secondary: {
-          DEFAULT: "#60a5fa",
-          light: "#93c5fd",
+          DEFAULT: "#2563eb",
+          light: "#3b82f6",
         },
         accent: {
-          DEFAULT: "#2dd4bf",
-          light: "#5eead4",
+          DEFAULT: "#06b6d4",
+          light: "#22d3ee",
+        },
+        brand: {
+          cyan: "#06b6d4",
+          blue: "#2563eb",
+          indigo: "#4f46e5",
         },
       },
       keyframes: {
@@ -46,10 +55,20 @@ export default {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "gradient-pan": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "gradient-pan": "gradient-pan 8s ease infinite",
       },
     },
   },

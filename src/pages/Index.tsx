@@ -11,8 +11,10 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Hobbies from "@/components/Hobbies";
+import { personalInfo } from "@/config/portfolio-config";
 
 const Index = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -26,6 +28,12 @@ const Index = () => {
       {portfolioConfig.features.showHobbies && <Hobbies />}
       {portfolioConfig.features.showEducation && <Education />}
       {portfolioConfig.features.showContact && <Contact />}
+
+      <footer className="border-t border-slate-200 bg-white py-8 text-center">
+        <p className="text-sm text-slate-500">
+          © {year} {personalInfo.name}. Built with React, TypeScript & Tailwind CSS.
+        </p>
+      </footer>
     </div>
   );
 };

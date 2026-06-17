@@ -1,44 +1,61 @@
-
-import { Progress } from "@/components/ui/progress";
-import { useEffect, useState } from "react";
-import { skillsInfo, styling } from "@/config/portfolio-config";
+import { useEffect, useRef, useState } from "react";
+import { skillsInfo } from "@/config/portfolio-config";
+import SectionHeading from "./SectionHeading";
 
 const Skills = () => {
-  const [showProgress, setShowProgress] = useState(false);
+  const [show, setShow] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setShowProgress(true);
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setShow(true),
+      { threshold: 0.25 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="skills" className={`section-padding bg-gradient-to-br ${styling.gradients.skills}`}>
-      <div className="container mx-auto">
-        <h2 className="section-title">Skills & Languages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-primary">Technical Skills</h3>
-            <div className="space-y-4">
-              {skillsInfo.technicalSkills.map((skill) => (
+    <section id="skills" className="section bg-white">
+      <div className="section-inner">
+        <SectionHeading eyebrow="Toolbox" title="Skills & Languages" />
+
+        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          <div className="surface-card p-6 sm:p-8">
+            <h3 className="font-display text-lg font-semibold text-slate-900 mb-6">Technical Skills</h3>
+            <div className="space-y-5">
+              {skillsInfo.technicalSkills.map((skill, i) => (
                 <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-700">{skill.name}</span>
-                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="font-medium text-slate-700">{skill.name}</span>
+                    <span className="text-slate-400 tabular-nums">{skill.level}%</span>
                   </div>
-                  <Progress
-                    value={showProgress ? skill.level : 0}
-                    className="transition-all duration-1000 ease-out"
-                  />
+                  <div className="skill-track">
+                    <div
+                      className="skill-fill"
+                      style={{
+                        width: show ? `${skill.level}%` : "0%",
+                        transitionDelay: `${i * 70}ms`,
+                      }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-primary">Languages</h3>
-            <div className="space-y-4">
+
+          <div className="surface-card p-6 sm:p-8">
+            <h3 className="font-display text-lg font-semibold text-slate-900 mb-6">Languages</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {skillsInfo.languages.map((lang) => (
-                <div key={lang.name} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="font-medium text-gray-700">{lang.name}</span>
-                  <span className="text-sm text-gray-500">{lang.level}</span>
+                <div
+                  key={lang.name}
+                  className="flex flex-col rounded-xl border border-slate-100 bg-slate-50/60 p-4"
+                >
+                  <span className="font-medium text-slate-800">{lang.name}</span>
+                  <span className="text-xs text-blue-600 mt-0.5">{lang.level}</span>
                 </div>
               ))}
             </div>
