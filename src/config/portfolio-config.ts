@@ -177,12 +177,12 @@ export const portfolioConfig: PortfolioConfig = {
   projectsInfo: [
     {
       title: "ExplainCast — Faithful AI Forecast Explanations",
-      description: "A GenAI system that turns a time-series forecast into a plain-English explanation a stakeholder can trust — and then scores how faithful that explanation is. Pipeline: gradient-boosted forecast → SHAP attribution → retrieval (glossary grounding + semantic RAG) → Claude tool-calling narrative constrained to the model's real drivers → faithfulness eval (attribution coverage + hallucinated-driver detection). FastAPI + web UI, Dockerized, runs on real UCI energy data. Built to fuse LLM/RAG/MLOps with interpretability research.",
+      description: "A GenAI system that turns a time-series forecast into a plain-English explanation a stakeholder can trust — and then scores how faithful that explanation is. Pipeline: gradient-boosted forecast → SHAP attribution → retrieval (glossary grounding + semantic RAG) → Claude tool-calling narrative constrained to the model's real drivers → faithfulness eval (attribution coverage + hallucinated-driver detection). FastAPI + web UI, Dockerized, runs on real UCI energy data. Try the live demo — pick an instance and watch the forecast, signed drivers, and faithfulness score update.",
       tech: ["Python", "Claude (tool-calling)", "RAG", "SHAP", "FastAPI", "Docker"],
       github: "https://github.com/slezoric/explaincast",
-      showGithub: false,
-      live: "",
-      showLive: false,
+      showGithub: true,
+      live: "https://explaincast.jiztominnova.tech/",
+      showLive: true,
     },
     {
       title: "GPS + CAN Field Tagger",
