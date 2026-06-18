@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { portfolioConfig } from "@/config/portfolio-config";
 import Hero from "@/components/Hero";
@@ -11,8 +12,10 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Hobbies from "@/components/Hobbies";
+import { personalInfo } from "@/config/portfolio-config";
 
 const Index = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -26,6 +29,17 @@ const Index = () => {
       {portfolioConfig.features.showHobbies && <Hobbies />}
       {portfolioConfig.features.showEducation && <Education />}
       {portfolioConfig.features.showContact && <Contact />}
+
+      <footer className="border-t border-slate-200 bg-white py-8 text-center">
+        <p className="text-sm text-slate-500">
+          © {year} {personalInfo.name}. Built with React, TypeScript & Tailwind CSS.
+        </p>
+        <p className="mt-2 text-xs text-slate-400">
+          <Link to="/opportunities" className="hover:text-blue-600 hover:underline">
+            Opportunities
+          </Link>
+        </p>
+      </footer>
     </div>
   );
 };

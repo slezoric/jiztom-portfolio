@@ -15,12 +15,41 @@ export const portfolioConfig: PortfolioConfig = {
     github: "https://github.com/jiztom",
     resumeUrl: "/resume.pdf",
     profileImage: "jiztom.jpeg",
+    location: "West Des Moines, IA · Open to remote & relocation",
+    availability: "Open to AI/ML, Data Science & Embedded Systems roles",
+    highlights: [
+      { label: "PhD", value: "Computer Engineering" },
+      { label: "Range", value: "Sensor → Firmware → Model" },
+      { label: "Publications", value: "3× IEEE (ICMLA · ICECET · Access)" },
+    ],
   },
 
   aboutInfo: {
+    lead: "PhD Computer Engineer working across the full stack of intelligent systems — from the sensor and the firmware that reads it, to the data pipeline that cleans it, to the model that learns from it.",
+    highlights: [
+      {
+        icon: "Cpu",
+        title: "Hardware-to-model range",
+        description: "C/C++ firmware and CAN/J1939 drivers on field equipment through to PyTorch CNN/Transformer pipelines — one engineer across the whole stack.",
+      },
+      {
+        icon: "BrainCircuit",
+        title: "AI / ML & computer vision",
+        description: "Sensor-to-image regression and open-world detection — 18–22% accuracy and precision gains in production research.",
+      },
+      {
+        icon: "Database",
+        title: "Data at terabyte scale",
+        description: "Chunked ETL, SQL data loaders, and parallel I/O that cut preprocessing ~30% on multi-terabyte datasets.",
+      },
+      {
+        icon: "Activity",
+        title: "Real-time & safety-critical",
+        description: "Lock-free C++ audio DSP at sub-millisecond latency, plus ISO 26262 / IEC 61508 functional-safety discipline.",
+      },
+    ],
     paragraphs: [
-      "PhD Computer Engineer working across the full stack of intelligent systems — from the sensor and the firmware that reads it, to the data pipeline that cleans it, to the model that learns from it. I build CNN/Transformer pipelines in PyTorch for sensor-to-image regression, write deterministic C/C++ firmware and drivers (CAN/J1939, UART, SPI, I2C, ADC) for field-deployed agricultural equipment, and ship real-time C++ audio DSP under sub-millisecond latency constraints.",
-      "Three IEEE publications, a 22% gain in field-segmentation precision, and ~30% faster preprocessing on terabyte-scale datasets — my work pairs research depth with production discipline: lock-free concurrency, test-driven development, and HIL-style validation. I'm targeting roles in AI engineering, data science, and custom embedded systems where that hardware-to-model range is an advantage."
+      "Three IEEE publications, a 22% gain in field-segmentation precision, and ~30% faster preprocessing on terabyte-scale datasets — my work pairs research depth with production discipline: lock-free concurrency, test-driven development, and HIL-style validation. I'm targeting roles in AI engineering, data science, and custom embedded systems where that hardware-to-model range is an advantage.",
     ],
     skills: ["AI / ML", "Data Science", "Embedded Systems", "Computer Vision", "Real-Time DSP", "C/C++"],
   },
@@ -146,6 +175,15 @@ export const portfolioConfig: PortfolioConfig = {
   ],
 
   projectsInfo: [
+    {
+      title: "ExplainCast — Faithful AI Forecast Explanations",
+      description: "A GenAI system that turns a time-series forecast into a plain-English explanation a stakeholder can trust — and then scores how faithful that explanation is. Pipeline: gradient-boosted forecast → SHAP attribution → retrieval (glossary grounding + semantic RAG) → Claude tool-calling narrative constrained to the model's real drivers → faithfulness eval (attribution coverage + hallucinated-driver detection). FastAPI + web UI, Dockerized, runs on real UCI energy data. Built to fuse LLM/RAG/MLOps with interpretability research.",
+      tech: ["Python", "Claude (tool-calling)", "RAG", "SHAP", "FastAPI", "Docker"],
+      github: "https://github.com/slezoric/explaincast",
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
     {
       title: "GPS + CAN Field Tagger",
       description: "Designed and deployed a custom on-vehicle hardware module end-to-end — schematic, transceiver selection, GNSS-over-UART integration, and C firmware — that broadcasts time-synchronized, georeferenced events onto an agricultural equipment CAN network for downstream data fusion.",

@@ -9,9 +9,21 @@ export interface PersonalInfo {
   github: string;
   resumeUrl: string;
   profileImage: string;
+  location?: string;
+  availability?: string;
+  scholar?: string;
+  highlights?: { label: string; value: string }[];
+}
+
+export interface AboutHighlight {
+  icon: string; // lucide-react icon name
+  title: string;
+  description: string;
 }
 
 export interface AboutInfo {
+  lead: string;
+  highlights: AboutHighlight[];
   paragraphs: string[];
   skills: string[];
 }
@@ -35,6 +47,7 @@ export interface Experience {
   title: string;
   company: string;
   period: string;
+  location?: string;
   description: string[];
 }
 
@@ -55,8 +68,10 @@ export interface Publication {
   year: number;
   authors: string;
   doi?: string;
+  url?: string;
   abstract: string;
   type: string;
+  highlights?: string[];
 }
 
 export interface Education {
@@ -64,6 +79,7 @@ export interface Education {
   school: string;
   period: string;
   gpa: string;
+  focus?: string;
 }
 
 export interface Testimonial {

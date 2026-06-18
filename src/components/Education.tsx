@@ -1,28 +1,33 @@
-
-import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
-import { educationInfo, styling } from "@/config/portfolio-config";
+import { educationInfo } from "@/config/portfolio-config";
+import SectionHeading from "./SectionHeading";
 
 const Education = () => {
   return (
-    <section id="education" className={`section-padding bg-gradient-to-bl ${styling.gradients.education}`}>
-      <div className="container mx-auto">
-        <h2 className="section-title">Education</h2>
-        <div className="max-w-4xl mx-auto space-y-6">
+    <section id="education" className="section bg-white">
+      <div className="section-inner">
+        <SectionHeading eyebrow="Academics" title="Education" />
+
+        <div className="max-w-3xl mx-auto space-y-5">
           {educationInfo.map((edu, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-white/80">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <GraduationCap className="w-6 h-6 text-secondary mt-1" />
-                  <div>
-                    <h3 className={`text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-${styling.primaryColor} via-${styling.secondaryColor} to-${styling.accentColor}`}>{edu.degree}</h3>
-                    <p className="text-secondary">{edu.school}</p>
-                    <p className="text-gray-500">{edu.period}</p>
-                    <p className="text-gray-600 mt-2">GPA: {edu.gpa}</p>
-                  </div>
+            <div key={index} className="surface-card p-6">
+              <div className="flex items-start gap-4">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 text-white">
+                  <GraduationCap className="h-5 w-5" />
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <h3 className="font-display text-lg font-semibold text-slate-900">{edu.degree}</h3>
+                    <span className="text-sm text-slate-500 shrink-0">{edu.period}</span>
+                  </div>
+                  <p className="text-blue-600 font-medium">{edu.school}</p>
+                  {edu.focus && <p className="text-sm text-slate-600 mt-2">{edu.focus}</p>}
+                  <p className="text-sm text-slate-500 mt-2">
+                    <span className="font-medium text-slate-700">GPA:</span> {edu.gpa}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

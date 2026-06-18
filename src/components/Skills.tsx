@@ -1,34 +1,34 @@
-
 import { Brain, Database, Cpu, CircuitBoard, ShieldCheck, Languages as LanguagesIcon } from "lucide-react";
-import { skillsInfo, styling } from "@/config/portfolio-config";
+import { skillsInfo } from "@/config/portfolio-config";
+import SectionHeading from "./SectionHeading";
 
-// Icons are matched to skillsInfo.categories by order.
+// Icons matched to skillsInfo.categories by order (cycles if more categories).
 const categoryIcons = [Brain, Database, Cpu, CircuitBoard, ShieldCheck];
 
 const Skills = () => {
   return (
-    <section id="skills" className={`section-padding bg-gradient-to-br ${styling.gradients.skills}`}>
-      <div className="container mx-auto">
-        <h2 className="section-title">Skills & Languages</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+    <section id="skills" className="section bg-white">
+      <div className="section-inner">
+        <SectionHeading eyebrow="Toolbox" title="Skills & Languages" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Technical skill categories */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
             {skillsInfo.categories.map((category, index) => {
               const Icon = categoryIcons[index % categoryIcons.length];
               return (
-                <div key={category.name} className="animate-fade-in">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Icon className="w-5 h-5 text-secondary" strokeWidth={1.75} />
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
+                <div key={category.name} className="surface-card p-5 sm:p-6">
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <span className="grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 text-white">
+                      <Icon className="w-4 h-4" strokeWidth={1.75} />
+                    </span>
+                    <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-slate-900">
                       {category.name}
                     </h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm rounded-lg bg-secondary/10 text-secondary border border-secondary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-secondary/20 hover:border-secondary/30"
-                      >
+                      <span key={skill} className="chip">
                         {skill}
                       </span>
                     ))}
@@ -39,19 +39,23 @@ const Skills = () => {
           </div>
 
           {/* Languages */}
-          <div className="animate-fade-in">
-            <div className="flex items-center gap-2 mb-3">
-              <LanguagesIcon className="w-5 h-5 text-secondary" strokeWidth={1.75} />
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">Languages</h3>
+          <div className="surface-card p-5 sm:p-6">
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 text-white">
+                <LanguagesIcon className="w-4 h-4" strokeWidth={1.75} />
+              </span>
+              <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-slate-900">
+                Languages
+              </h3>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {skillsInfo.languages.map((lang) => (
                 <div
                   key={lang.name}
-                  className="flex justify-between items-center p-3 rounded-lg bg-gray-50 border border-gray-100"
+                  className="flex justify-between items-center rounded-xl border border-slate-100 bg-slate-50/60 px-4 py-2.5"
                 >
-                  <span className="font-medium text-gray-700">{lang.name}</span>
-                  <span className="text-sm font-medium text-secondary">{lang.level}</span>
+                  <span className="font-medium text-slate-800">{lang.name}</span>
+                  <span className="text-xs text-blue-600">{lang.level}</span>
                 </div>
               ))}
             </div>

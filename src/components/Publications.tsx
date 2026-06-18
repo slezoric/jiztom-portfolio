@@ -1,58 +1,78 @@
+import { ExternalLink, BookOpen, FileText, GraduationCap } from "lucide-react";
+import { publicationsInfo } from "@/config/portfolio-config";
+import SectionHeading from "./SectionHeading";
 
-import { FileText, BookOpen, Award } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { publicationsInfo, styling } from "@/config/portfolio-config";
+const typeIcon = (type: string) => {
+  const t = type.toLowerCase();
+  if (t.includes("thesis")) return GraduationCap;
+  if (t.includes("journal") || t.includes("access")) return FileText;
+  return BookOpen;
+};
 
 const Publications = () => {
   return (
-    <section id="publications" className={`section-padding bg-gradient-to-bl ${styling.gradients.publications}`}>
-      <div className="container mx-auto relative px-4 sm:px-6">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMiIgZmlsbD0iI2EzYTNmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-40" />
-        
-        <h2 className={`section-title bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 animate-fade-in`}>
-          Research Publications
-        </h2>
-        
-        <div className="max-w-4xl mx-auto relative">
-          <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse hidden sm:block" />
-          <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse hidden sm:block" />
-          
-          <div className="space-y-6">
-            {publicationsInfo.map((publication, index) => (
-              <Card key={index} className="backdrop-blur-sm bg-white/80 hover:shadow-lg transition-all duration-300">
-                <CardHeader className="pb-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="text-lg sm:text-xl font-bold text-primary">{publication.title}</CardTitle>
-                      <CardDescription className="text-sm sm:text-base mt-1">
-                        {publication.authors} • {publication.year}
-                      </CardDescription>
+    <section id="publications" className="section">
+      <div className="section-inner">
+        <SectionHeading
+          eyebrow="Research"
+          title="Publications"
+          subtitle="Peer-reviewed work on interpretable AI, time-series forecasting, and explainability — published with IEEE."
+        />
+
+        <div className="max-w-3xl mx-auto space-y-5">
+          {publicationsInfo.map((pub, index) => {
+            const Icon = typeIcon(pub.type);
+            const link = pub.url || (pub.doi ? `https://doi.org/${pub.doi}` : undefined);
+            return (
+              <article key={index} className="surface-card p-6">
+                <div className="flex items-start gap-4">
+                  <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-blue-50 text-blue-600">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <span className="chip-brand">{pub.type}</span>
+                      <span className="text-xs text-slate-400">{pub.year}</span>
                     </div>
-                    <div className="mt-1">
-                      {publication.type === "journal" ? 
-                        <FileText className="h-5 w-5 text-blue-500" /> : 
-                        <BookOpen className="h-5 w-5 text-indigo-500" />
-                      }
+                    <h3 className="font-display text-base sm:text-lg font-semibold text-slate-900 leading-snug">
+                      {pub.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 mt-1">{pub.authors}</p>
+                    <p className="text-sm italic text-blue-700/80 mt-1">
+                      {pub.journal || pub.conference}
+                    </p>
+
+                    {pub.highlights && pub.highlights.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {pub.highlights.map((h) => (
+                          <span key={h} className="chip">{h}</span>
+                        ))}
+                      </div>
+                    )}
+
+                    <p className="text-sm leading-relaxed text-slate-600 mt-3">{pub.abstract}</p>
+
+                    <div className="flex flex-wrap items-center gap-4 mt-3 text-sm">
+                      {link && (
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-medium text-blue-600 hover:text-blue-700"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          {pub.url && !pub.doi ? "View paper" : "View on IEEE / DOI"}
+                        </a>
+                      )}
+                      {pub.doi && (
+                        <span className="text-xs text-slate-400">DOI: {pub.doi}</span>
+                      )}
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    <p className="text-sm text-gray-600 italic">
-                      {publication.journal || publication.conference}
-                    </p>
-                    <p className="text-xs sm:text-sm text-gray-700">
-                      {publication.abstract}
-                    </p>
-                    <div className="flex items-center mt-2 text-xs sm:text-sm">
-                      <Award className="h-4 w-4 mr-1 text-purple-500" />
-                      <span className="text-purple-600">DOI: {publication.doi}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

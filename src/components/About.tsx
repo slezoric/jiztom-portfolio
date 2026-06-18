@@ -1,36 +1,77 @@
+import {
+  GraduationCap,
+  TrendingUp,
+  Search,
+  Rocket,
+  Sparkles,
+  Cpu,
+  BrainCircuit,
+  Database,
+  Activity,
+} from "lucide-react";
+import { aboutInfo } from "@/config/portfolio-config";
+import SectionHeading from "./SectionHeading";
 
-import { aboutInfo, styling } from "@/config/portfolio-config";
+const iconMap: Record<string, typeof GraduationCap> = {
+  GraduationCap,
+  TrendingUp,
+  Search,
+  Rocket,
+  Cpu,
+  BrainCircuit,
+  Database,
+  Activity,
+};
 
 const About = () => {
   return (
-    <section id="about" className={`section-padding bg-gradient-to-br ${styling.gradients.about}`}>
-      <div className="container mx-auto relative px-4 sm:px-6">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMiIgZmlsbD0iI2EzYTNmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-40" />
-        
-        <h2 className={`section-title bg-clip-text text-transparent bg-gradient-to-r from-${styling.primaryColor} via-${styling.secondaryColor} to-${styling.accentColor} animate-fade-in`}>
-          About Me
-        </h2>
-        
-        <div className="max-w-3xl mx-auto relative">
-          <div className="absolute -top-6 -left-6 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse hidden sm:block" />
-          <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse hidden sm:block" />
-          
-          <div className="backdrop-blur-sm bg-white/80 rounded-2xl p-4 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 space-y-4 sm:space-y-6 relative z-10">
-            {aboutInfo.paragraphs.map((paragraph, index) => (
-              <p key={index} className={`text-base sm:text-lg text-gray-700 leading-relaxed animate-fade-in ${index > 0 ? 'delay-100' : ''}`}>
-                {paragraph}
-              </p>
-            ))}
-            
-            {aboutInfo.paragraphs.length > 1 && <div className="h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent my-4 sm:my-6" />}
-            
-            <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-2 sm:gap-4">
-              {aboutInfo.skills.map((skill, index) => (
-                <div key={index} className={`px-3 py-1.5 sm:px-4 sm:py-2 bg-${index === 0 ? 'indigo' : index === 1 ? 'purple' : 'pink'}-50 rounded-lg`}>
-                  <span className={`text-sm sm:text-base text-${index === 0 ? 'indigo' : index === 1 ? 'purple' : 'pink'}-600 font-semibold`}>{skill}</span>
+    <section id="about" className="section">
+      <div className="section-inner">
+        <SectionHeading eyebrow="Who I Am" title="About Me" />
+
+        <div className="max-w-4xl mx-auto">
+          {/* One-line lead — the 5-second takeaway */}
+          <p className="text-lg sm:text-2xl font-medium leading-snug text-slate-800 text-center max-w-3xl mx-auto">
+            {aboutInfo.lead}
+          </p>
+
+          {/* Scannable highlight cards */}
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {aboutInfo.highlights.map((item) => {
+              const Icon = iconMap[item.icon] ?? Sparkles;
+              return (
+                <div key={item.title} className="surface-card p-5 sm:p-6 flex gap-4">
+                  <div className="shrink-0 grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 text-white">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-slate-900">{item.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
+          </div>
+
+          {/* Optional detail for those who want the full story */}
+          {aboutInfo.paragraphs.map((paragraph, index) => (
+            <p
+              key={index}
+              className="mt-8 text-base leading-relaxed text-slate-600 max-w-3xl mx-auto text-center"
+            >
+              {paragraph}
+            </p>
+          ))}
+
+          {/* Focus areas */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
+            {aboutInfo.skills.map((skill) => (
+              <span key={skill} className="chip-brand">
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>
