@@ -15,7 +15,15 @@ export interface PersonalInfo {
   highlights?: { label: string; value: string }[];
 }
 
+export interface AboutHighlight {
+  icon: string; // lucide-react icon name
+  title: string;
+  description: string;
+}
+
 export interface AboutInfo {
+  lead: string;
+  highlights: AboutHighlight[];
   paragraphs: string[];
   skills: string[];
 }

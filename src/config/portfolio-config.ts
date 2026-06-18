@@ -26,9 +26,31 @@ export const portfolioConfig: PortfolioConfig = {
   },
 
   aboutInfo: {
+    lead: "Machine-learning engineer and PhD (Computer Engineering, Iowa State) who builds interpretable AI that ships — turning messy sensor data into explainable, production-ready forecasts.",
+    highlights: [
+      {
+        icon: "GraduationCap",
+        title: "PhD in interpretable AI",
+        description: "Unified ResNet + Transformer pipeline that turns heterogeneous sensor streams into forecasts you can explain.",
+      },
+      {
+        icon: "TrendingUp",
+        title: "Measurable impact",
+        description: "20% RMSE cut on energy forecasting · 94.1% ECG arrhythmia accuracy · 15% faster real-time sensor testing at 3M.",
+      },
+      {
+        icon: "Search",
+        title: "Explainability by default",
+        description: "Grad-CAM and SHAP baked in, so every prediction ships with a human-readable reason — not a black box.",
+      },
+      {
+        icon: "Rocket",
+        title: "Research to production",
+        description: "Published at IEEE ICMLA, ICECET & IEEE Access — and deployed across healthcare, energy, and industry.",
+      },
+    ],
     paragraphs: [
-      "I'm a machine-learning engineer and recently minted PhD (Computer Engineering, Iowa State University) with 4+ years building end-to-end AI systems. My doctoral research delivered a unified deep-learning pipeline that turns messy, heterogeneous sensor streams into interpretable forecasts — fusing ResNet and Transformer architectures, automatically pruning data to cut computational load by 40%+, and layering Grad-CAM and SHAP so every prediction ships with a human-readable explanation.",
-      "I care about AI that is not just accurate but transparent and production-ready. I've delivered measurable results across domains — a 20% RMSE reduction on energy forecasting, 94.1% accuracy on ECG arrhythmia detection, and a 15% gain in real-time sensor testing at 3M — and published this work across IEEE ICMLA, ICECET, and IEEE Access. Whether the problem lives in healthcare, energy, industrial monitoring, or agriculture, I bridge rigorous research and shippable engineering.",
+      "Across 4+ years I've built end-to-end AI systems with one conviction: accuracy isn't enough without transparency. My doctoral work fused deep architectures with automated data pruning (40%+ less compute) and layered explainability on top — bridging rigorous research and shippable engineering across healthcare, energy, industrial monitoring, and agriculture.",
     ],
     skills: [
       "Interpretable AI (XAI)",
