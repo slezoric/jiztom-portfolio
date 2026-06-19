@@ -59,6 +59,10 @@ export interface Project {
   showGithub: boolean;
   live?: string;
   showLive: boolean;
+  /** Optional screenshot/preview shown at the top of the card (path under /public or full URL). */
+  image?: string;
+  /** Alt text for the image; falls back to the project title. */
+  imageAlt?: string;
 }
 
 export interface Publication {

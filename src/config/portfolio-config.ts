@@ -183,6 +183,8 @@ export const portfolioConfig: PortfolioConfig = {
       showGithub: true,
       live: "https://explaincast.jiztominnova.tech/",
       showLive: true,
+      image: "/projects/explaincast.png",
+      imageAlt: "ExplainCast demo — energy forecast with signed SHAP drivers and a faithfulness score",
     },
     {
       title: "GPS + CAN Field Tagger",

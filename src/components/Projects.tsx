@@ -21,6 +21,17 @@ const Projects = () => {
                 key={index}
                 className={`surface-card p-6 flex flex-col group ${featured ? "md:col-span-2 ring-1 ring-blue-100" : ""}`}
               >
+                {project.image && (
+                  <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-[inherit] border-b border-slate-100 bg-slate-50">
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt ?? project.title}
+                      loading="lazy"
+                      className="w-full aspect-[16/9] object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                )}
+
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <h3 className="font-display text-lg font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">
                     {project.title}
