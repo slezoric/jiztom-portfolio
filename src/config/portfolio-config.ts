@@ -74,7 +74,7 @@ export const portfolioConfig: PortfolioConfig = {
       },
       {
         name: "Quality, Safety & Tooling",
-        skills: ["Test-Driven Development", "GoogleTest", "DOE Methodology", "Functional Safety", "ISO 26262", "IEC 61508", "ISO 15118", "Git", "CMake / Make", "GCC / GDB"],
+        skills: ["Test-Driven Development", "GoogleTest", "DOE Methodology", "Functional Safety", "ISO 26262", "IEC 61508", "ISO 15118", "Git", "CMake / Make", "GCC / GDB", "LaTeX"],
       },
     ],
     languages: [
@@ -88,6 +88,16 @@ export const portfolioConfig: PortfolioConfig = {
   },
 
   experienceInfo: [
+    {
+      title: "Applied AI Engineer",
+      company: "Independent · LumenWorks LLC",
+      period: "2025 - Present",
+      description: [
+        "Built ExplainCast end-to-end — a GenAI system that turns a time-series forecast into a plain-English explanation a stakeholder can trust: gradient-boosted forecast → SHAP attribution → retrieval (glossary grounding + semantic RAG) → Claude tool-calling narrative constrained to the model's real drivers → faithfulness eval (attribution coverage + hallucinated-driver detection). Shipped as a Dockerized FastAPI service with a live web demo.",
+        "Designed and integrated custom applied-AI tools and plugins that automate business workflows and extend existing applications, taking each from prototype to production deployment.",
+        "Apply AI-assisted development workflows across the build pipeline to accelerate delivery while keeping production discipline — testing, containerization, and observability."
+      ],
+    },
     {
       title: "Lead Developer, Real-Time DSP / C++",
       company: "Make Believe Studio",
@@ -117,7 +127,8 @@ export const portfolioConfig: PortfolioConfig = {
         "Cut preprocessing time ~30% on terabyte-scale datasets via scalable SQL Server data loaders, chunked ETL, and parallel I/O workers — raising GPU training throughput.",
         "Published a novel pattern-based methodology for multivariate temporal regression across three peer-reviewed IEEE venues.",
         "Raised insect-detection rates 25% with 1D-CNN classifiers on spectrogram features for early-warning pest monitoring.",
-        "Profiled memory bottlenecks and tuned DataLoader concurrency to streamline training workflows across a multi-investigator lab."
+        "Profiled memory bottlenecks and tuned DataLoader concurrency to streamline training workflows across a multi-investigator lab.",
+        "Rewrote and modernized the Iowa State University LaTeX thesis template — restructured the document class for Graduate College formatting compliance and simplified the authoring workflow, easing reuse by other graduate students."
       ],
     },
     {
@@ -250,6 +261,14 @@ export const portfolioConfig: PortfolioConfig = {
       description: "Engineered a scalable data pipeline for processing and analyzing large-scale agricultural datasets, enabling researchers to derive meaningful patterns and insights from complex, heterogeneous data sources.",
       tech: ["Python", "SQL", "Docker", "Kubernetes", "Data Engineering"],
       github: "https://github.com/jiztom/agri-data-pipeline",
+      showGithub: false,
+      live: "",
+      showLive: false,
+    },
+    {
+      title: "Iowa State University Thesis LaTeX Template",
+      description: "Rewrote and modernized Iowa State University's graduate thesis LaTeX template — restructured the document class for Graduate College formatting compliance, untangled brittle layout code, and streamlined the authoring workflow so other graduate students could adopt it with less friction.",
+      tech: ["LaTeX", "BibTeX", "Git"],
       showGithub: false,
       live: "",
       showLive: false,
