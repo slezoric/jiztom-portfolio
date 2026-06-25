@@ -2,8 +2,9 @@ import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Personal job-search reference (not a public showcase). Linked discreetly from the footer.
-// Shortlist + framing from the career-fit analysis: lead with XAI/interpretability,
-// where your thesis IS the product; AgTech is a proven domain to work opportunistically.
+// Shortlist + framing: lead with applied AI / LLM evaluation (ExplainCast is the proof),
+// back it with XAI/interpretability where the thesis IS the product; AgTech is a proven
+// domain to work opportunistically.
 
 type Company = { name: string; why: string; star?: boolean };
 type Tier = { title: string; note: string; companies: Company[] };
@@ -21,13 +22,27 @@ const boards: { name: string; url: string }[] = [
 
 const tiers: Tier[] = [
   {
-    title: "XAI / Interpretability — highest signal",
-    note: "Your PhD (interpretable forecasting, SHAP/Grad-CAM, faithfulness eval) IS the product. Apply here first.",
+    title: "Applied AI / LLM evaluation — highest signal",
+    note: "ExplainCast is the proof: RAG + Claude tool-calling + a faithfulness / hallucinated-driver eval. These teams build exactly that. Apply here first.",
     companies: [
-      { name: "Arize AI", why: "ML observability + explainability — direct thesis match.", star: true },
-      { name: "Fiddler AI", why: "Model monitoring + explainability platform.", star: true },
-      { name: "WhyLabs", why: "AI observability; interpretability is the whole business.", star: true },
-      { name: "Weights & Biases", why: "Experiment tracking / MLOps — adjacent, strong fit." },
+      { name: "Anthropic", why: "Applied AI + faithfulness/eval research — direct match; ExplainCast already builds on Claude.", star: true },
+      { name: "Patronus AI", why: "LLM evaluation + hallucination detection — your faithfulness-eval work is the product.", star: true },
+      { name: "Galileo", why: "LLM evaluation & observability platform — strong applied-AI fit.", star: true },
+      { name: "Scale AI", why: "Applied AI, model eval, and data — high req volume." },
+      { name: "OpenAI (Applied)", why: "Applied / forward-deployed roles building real LLM products." },
+      { name: "Distyl AI", why: "Enterprise applied AI; prototype-to-production delivery." },
+      { name: "LangChain", why: "LLM tooling, agents, and eval (LangSmith)." },
+    ],
+  },
+  {
+    title: "XAI / Interpretability — thesis-backed",
+    note: "Your PhD (interpretable forecasting, SHAP/Grad-CAM, faithfulness eval) IS the product. Most now also do LLM observability — a clean bridge into the applied-AI tier above.",
+    companies: [
+      { name: "Arize AI", why: "ML + LLM observability and explainability — direct thesis match.", star: true },
+      { name: "Fiddler AI", why: "Model monitoring + explainability + LLM observability.", star: true },
+      { name: "WhyLabs", why: "AI observability; interpretability is the whole business." },
+      { name: "Weights & Biases", why: "Experiment tracking / MLOps + Weave for LLM eval." },
+      { name: "Credo AI", why: "AI governance + model transparency for regulated use." },
     ],
   },
   {
@@ -36,13 +51,17 @@ const tiers: Tier[] = [
     companies: [
       { name: "Tempus", why: "Clinical AI; interpretable models for diagnostics." },
       { name: "GE HealthCare", why: "Regulated medical AI; explainability required." },
+      { name: "Aidoc", why: "FDA-cleared clinical AI; interpretable triage." },
+      { name: "Viz.ai", why: "Clinical decision AI on imaging and time-series signals." },
     ],
   },
   {
     title: "Energy forecasting",
-    note: "Your UCI-energy + time-series forecasting work maps directly.",
+    note: "Your UCI-energy + time-series forecasting work (and ExplainCast's energy demo) map directly.",
     companies: [
+      { name: "Amperon", why: "ML energy-demand forecasting — direct time-series match.", star: true },
       { name: "GridMatic", why: "ML for power-market forecasting." },
+      { name: "Camus Energy", why: "Grid orchestration + load forecasting." },
       { name: "AES", why: "Utility-scale energy + forecasting teams." },
     ],
   },
@@ -54,6 +73,8 @@ const tiers: Tier[] = [
       { name: "NVIDIA", why: "Edge inference + deep learning; embedded-to-model range fits." },
       { name: "Apple", why: "On-device ML + embedded; hardware-to-model profile." },
       { name: "Qualcomm", why: "Edge AI on embedded silicon." },
+      { name: "Meta", why: "Large applied-ML org; high req volume, sponsor-friendly." },
+      { name: "Google DeepMind", why: "Applied research + LLM eval; high bar, high volume." },
     ],
   },
   {
@@ -61,11 +82,10 @@ const tiers: Tier[] = [
     note: "Apply opportunistically (don't make it your only lane). They know ISU and your field work.",
     companies: [
       { name: "John Deere", why: "Iowa-adjacent, knows ISU; ag autonomy + embedded.", star: true },
-      { name: "Climate LLC / Bayer", why: "Digital-ag ML at scale." },
+      { name: "Climate FieldView / Bayer", why: "Digital-ag ML at scale." },
       { name: "Corteva", why: "Ag data science." },
       { name: "CNH Industrial", why: "Ag equipment autonomy + embedded perception." },
       { name: "Caterpillar", why: "Heavy-equipment embedded + AI." },
-      { name: "Granular", why: "Ag analytics / data platform." },
     ],
   },
 ];
@@ -82,10 +102,11 @@ const Opportunities = () => {
           <p className="eyebrow">Private reference · job search</p>
           <h1 className="heading text-3xl sm:text-4xl">Opportunities & where to apply</h1>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            A working shortlist of teams that fit a PhD with interpretable-AI depth and a
-            sensor-to-firmware-to-model range. Strategy: lead with XAI/interpretability (where the
-            thesis is the product), keep AgTech as a proven domain, and use big-tech applied science
-            for volume and visa optionality.
+            A working shortlist of teams that fit a PhD with applied-AI and interpretable-AI depth
+            and a sensor-to-firmware-to-model range. Strategy: lead with applied AI / LLM evaluation
+            (ExplainCast is the proof), back it with XAI/interpretability where the thesis is the
+            product, keep AgTech as a proven domain, and use big-tech applied science for volume and
+            visa optionality.
           </p>
         </header>
 
